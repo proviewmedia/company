@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proview Media Co. | Las Vegas Web Design, SEO & Digital Marketing Agency</title>
+<meta name="description" content="Proview Media Co. is Las Vegas's premier web design, SEO, and digital marketing agency. Custom websites, branding, photography, and full-service marketing built to grow your business. Serving Las Vegas, Henderson, Summerlin & Clark County.">
+<meta name="keywords" content="Las Vegas web design, web design Las Vegas, Las Vegas website designer, Las Vegas SEO, SEO Las Vegas, Las Vegas digital marketing, Las Vegas marketing agency, Las Vegas branding, Las Vegas web developer, small business website Las Vegas, Las Vegas photographer, commercial photography Las Vegas, Proview Media, Proview Media Co">
+<meta name="author" content="Proview Media Co.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.proviewmediaco.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.proviewmediaco.com/">
+<meta property="og:title" content="Proview Media Co. | Las Vegas Web Design & Digital Marketing">
+<meta property="og:description" content="Custom websites, SEO, branding & photography for Las Vegas businesses. Book a free call today.">
+<meta property="og:site_name" content="Proview Media Co.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="geo.region" content="US-NV">
+<meta name="geo.placename" content="Las Vegas, Nevada">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Proview Media Co.","description":"Las Vegas web design, SEO, digital marketing, branding, and photography agency.","url":"https://www.proviewmediaco.com","telephone":"+17025271837","email":"proviewmediaco@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Las Vegas","addressRegion":"NV","addressCountry":"US"},"areaServed":["Las Vegas","Henderson","Summerlin","North Las Vegas","Clark County"],"serviceType":["Web Design","SEO","Digital Marketing","Branding","Photography"],"priceRange":"$$","founder":{"@type":"Person","name":"Melvin Morales"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPXLJ01JBK"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EPXLJ01JBK');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --white:#ffffff;
+  --off:#f7f7f5;
+  --line:#e8e8e8;
+  --ink:#0d0d0d;
+  --mid:#4a4a4a;
+  --muted:#888;
+  --amber:#c8874a;
+  --amber2:#a86d38;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+html,body{background:#ffffff!important}body{font-family:'Poppins',sans-serif;color:#0d0d0d;line-height:1.6;overflow-x:hidden}
+
+/* ── CURSOR ── */
+#cur{position:fixed;width:8px;height:8px;background:var(--amber);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s}
+#cur-r{position:fixed;width:34px;height:34px;border:1.5px solid var(--amber);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .1s var(--ease),top .1s var(--ease)}
+@media(hover:none),(pointer:coarse){#cur,#cur-r{display:none}body{cursor:auto}}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 52px;
+  transition:padding .3s,background .3s,box-shadow .3s;
+}
+nav.sc{padding:14px 52px;background:rgba(255,255,255,.97);box-shadow:0 1px 0 var(--line)}
+.logo{font-size:.7rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo-dot{width:6px;height:6px;background:var(--amber);border-radius:50%;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--ink)!important;color:#fff!important;padding:10px 22px;border-radius:5px}
+.nav-cta:hover{background:var(--amber)!important}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:600;position:relative}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .2s,width .3s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0;width:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── MOBILE MENU ── */
+#mobile-menu{display:none;position:fixed;inset:0;background:#fff;z-index:99999;flex-direction:column;justify-content:center;align-items:center;gap:0}
+#mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink)}
+.mob-link{font-size:1.6rem;font-weight:700;color:var(--ink);text-decoration:none;padding:16px 0;width:80%;text-align:center;border-bottom:1px solid var(--line);letter-spacing:-.01em;transition:color .2s}
+.mob-link:last-child{border-bottom:none}
+.mob-link:hover{color:var(--amber)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:80px}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:52px 60px;border-right:1px solid var(--line)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:24px}
+.hero-dot{width:5px;height:5px;background:var(--amber);border-radius:50%}
+.hero-h{font-size:clamp(2.6rem,4.5vw,4.8rem);font-weight:900;line-height:1.0;letter-spacing:-.03em;color:var(--ink);margin-bottom:20px}
+.hero-h span{color:var(--amber)}
+.hero-sub{font-size:.92rem;font-weight:400;color:var(--mid);line-height:1.75;max-width:430px;margin-bottom:40px}
+.hero-actions{display:flex;align-items:center;gap:16px;margin-bottom:52px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Poppins',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:5px;transition:all .2s;cursor:pointer;border:none}
+.btn-dark{background:var(--ink);color:#fff;padding:15px 30px}
+.btn-dark:hover{background:var(--amber);transform:translateY(-2px)}
+.btn-ghost{background:none;color:var(--mid);padding:15px 20px;border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);padding-top:28px}
+.hst{padding-right:28px;padding-left:28px;padding-top:4px;border-right:1px solid var(--line)}
+.hst:last-child{border-right:none}.hst:first-child{padding-left:0}
+.hst-n{font-size:1.8rem;font-weight:800;color:var(--ink);display:block;line-height:1;letter-spacing:-.02em}
+.hst-l{font-size:.52rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px;display:block}
+.hero-r{position:relative;overflow:hidden;background:var(--ink)}
+.hero-r img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85}
+.hero-tag{position:absolute;bottom:28px;left:28px;background:rgba(255,255,255,.97);border-radius:6px;padding:14px 20px;border-left:3px solid var(--amber)}
+.hero-tag-title{font-size:.78rem;font-weight:700;color:var(--ink);letter-spacing:.02em}
+.hero-tag-sub{font-size:.62rem;font-weight:400;color:var(--muted);margin-top:2px}
+
+/* ── PROOF BAR ── */
+.proof-bar{background:var(--off);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;height:40px;display:flex;align-items:center}
+.proof-track{display:flex;align-items:center;white-space:nowrap;animation:ticker 32s linear infinite;will-change:transform}
+.proof-track:hover{animation-play-state:paused}
+.proof-item{font-size:.62rem;font-weight:600;color:var(--mid);letter-spacing:.08em;text-transform:uppercase;padding:0 28px;border-right:1px solid var(--line);white-space:nowrap;display:inline-flex;align-items:center;gap:8px;height:40px;flex-shrink:0}
+.proof-item::before{content:"◆";color:var(--amber);font-size:.38rem;flex-shrink:0}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── SECTIONS ── */
+.sec{padding:80px 52px}
+.sec-label{font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:12px}
+.sec-h{font-size:clamp(1.8rem,3vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.025em;color:var(--ink)}
+.sec-h span{color:var(--amber)}
+.sec-sub{font-size:.9rem;font-weight:400;color:var(--mid);line-height:1.75;max-width:500px;margin-top:14px}
+
+/* ── SERVICES ── */
+.services{background:var(--white);border-top:1px solid var(--line)}
+.svc-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;gap:40px}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc-card{background:var(--white);padding:44px 40px;display:flex;flex-direction:column;transition:background .25s}
+.svc-card:hover{background:var(--off)}
+.svc-card-primary{background:var(--ink)}
+.svc-card-primary:hover{background:#1c1c1c}
+.svc-num{font-size:3rem;font-weight:900;color:var(--line);line-height:1;margin-bottom:20px;letter-spacing:-.04em}
+.svc-card-primary .svc-num{color:rgba(255,255,255,.07)}
+.svc-name{font-size:1.25rem;font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-.01em}
+.svc-card-primary .svc-name{color:#fff}
+.svc-desc{font-size:.85rem;font-weight:400;color:var(--mid);line-height:1.7;margin-bottom:24px}
+.svc-card-primary .svc-desc{color:rgba(255,255,255,.5)}
+.svc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:auto}
+.svc-tag{font-size:.55rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);border:1px solid var(--line);padding:5px 10px;border-radius:100px}
+.svc-card-primary .svc-tag{color:rgba(255,255,255,.4);border-color:rgba(255,255,255,.1)}
+.svc-cta{display:inline-flex;align-items:center;gap:6px;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);text-decoration:none;margin-top:28px;padding-top:24px;border-top:1px solid var(--line);width:100%;transition:gap .2s}
+.svc-card-primary .svc-cta{border-color:rgba(255,255,255,.08)}
+.svc-cta:hover{gap:12px}
+
+/* ── WHY ── */
+.why{background:var(--ink)}
+.why .sec-label{color:var(--amber)}
+.why .sec-h{color:#fff}
+.why .sec-sub{color:rgba(255,255,255,.45)}
+.why-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;gap:40px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.08)}
+.why-item{padding:40px 0;padding-right:40px;border-right:1px solid rgba(255,255,255,.08)}
+.why-item:last-child{border-right:none;padding-right:0}
+.why-item:not(:first-child){padding-left:40px}
+.why-num{font-size:2.5rem;font-weight:900;color:rgba(255,255,255,.06);line-height:1;margin-bottom:16px;letter-spacing:-.04em}
+.why-t{font-size:1rem;font-weight:700;color:#fff;margin-bottom:10px}
+.why-p{font-size:.83rem;font-weight:400;color:rgba(255,255,255,.45);line-height:1.7}
+
+/* ── PORTFOLIO ── */
+.portfolio{background:var(--white);border-top:1px solid var(--line)}
+.port-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;gap:24px;flex-wrap:wrap}
+.port-tabs{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.ptab{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:10px 22px;background:none;border:none;cursor:pointer;color:var(--muted);transition:all .2s;font-family:'Poppins',sans-serif}
+.ptab.active{background:var(--ink);color:#fff}
+.port-panel{display:none}
+.port-panel.visible{display:block}
+.port-filters{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
+.pfil{font-size:.58rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border:1px solid var(--line);border-radius:100px;background:none;cursor:pointer;color:var(--muted);transition:all .2s;font-family:'Poppins',sans-serif}
+.pfil.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.web-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.web-card{display:block;text-decoration:none;background:var(--white);overflow:hidden;transition:background .2s}
+.web-card:hover{background:var(--off)}
+.web-img{aspect-ratio:16/10;overflow:hidden;background:var(--off)}
+.web-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.web-card:hover .web-img img{transform:scale(1.04)}
+.web-info{padding:18px 20px}
+.web-title{font-size:.85rem;font-weight:700;color:var(--ink)}
+.web-url{font-size:.68rem;font-weight:400;color:var(--muted);margin-top:2px}
+.web-tag{font-size:.52rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-top:6px;display:block}
+.photo-grid{columns:3;gap:6px}
+.pg-item{break-inside:avoid;margin-bottom:6px;overflow:hidden}
+.pg-item img{width:100%;display:block;transition:transform .4s var(--ease)}
+.pg-item:hover img{transform:scale(1.03)}
+.photo-group{display:none}
+.photo-group.visible{display:block}
+
+/* ── PRICING ── */
+.pricing{background:var(--off);border-top:1px solid var(--line)}
+.pricing-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;gap:24px;flex-wrap:wrap}
+.pricing-toggle{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--white)}
+.prtab{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:10px 22px;background:none;border:none;cursor:pointer;color:var(--muted);transition:all .2s;font-family:'Poppins',sans-serif}
+.prtab.active{background:var(--ink);color:#fff}
+.pricing-panel{display:none}
+.pricing-panel.visible{display:block}
+.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.price-grid.two-col{grid-template-columns:1fr 1fr}
+.price-card{background:var(--white);padding:36px 32px;display:flex;flex-direction:column;position:relative}
+.price-badge{position:absolute;top:16px;right:16px;font-size:.52rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--amber);color:#fff;padding:4px 10px;border-radius:100px}
+.price-name{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:6px}
+.price-amount{font-size:1.4rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.price-note{font-size:.72rem;font-weight:400;color:var(--muted)}
+.price-tagline{font-size:.8rem;font-weight:400;color:var(--mid);line-height:1.6;margin:10px 0 16px}
+.price-divider{height:1px;background:var(--line);margin-bottom:16px}
+.price-list{list-style:none;flex:1;margin-bottom:24px}
+.price-list li{font-size:.78rem;font-weight:400;color:var(--mid);padding:6px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+.price-list li:last-child{border-bottom:none}
+.price-list li::before{content:"—";color:var(--amber);font-weight:700;flex-shrink:0}
+.price-cta{display:block;text-align:center;text-decoration:none;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:12px 18px;border:1.5px solid var(--ink);border-radius:5px;color:var(--ink);transition:all .2s;margin-top:auto;font-family:'Poppins',sans-serif}
+.price-cta:hover{background:var(--ink);color:#fff}
+.price-card.featured{background:var(--ink)}
+.price-card.featured .price-name{color:#fff}
+.price-card.featured .price-amount{color:#fff}
+.price-card.featured .price-note{color:rgba(255,255,255,.4)}
+.price-card.featured .price-tagline{color:rgba(255,255,255,.45)}
+.price-card.featured .price-divider{background:rgba(255,255,255,.08)}
+.price-card.featured .price-list li{color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.08)}
+.price-card.featured .price-list li::before{color:var(--amber)}
+.price-card.featured .price-cta{border-color:var(--amber);color:var(--amber)}
+.price-card.featured .price-cta:hover{background:var(--amber);color:#fff}
+
+/* ── ABOUT + PROCESS combined ── */
+.about{background:var(--white);border-top:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.founder-wrap{display:flex;align-items:center;gap:20px;margin-bottom:24px}
+.founder-photo{width:72px;height:72px;border-radius:50%;overflow:hidden;border:2px solid var(--line);flex-shrink:0}
+.founder-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.founder-name{font-size:1.1rem;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.founder-role{font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-top:2px}
+.founder-bio{font-size:.87rem;font-weight:400;color:var(--mid);line-height:1.78;margin-bottom:24px}
+.founder-contact a{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:500;color:var(--mid);text-decoration:none;margin-right:20px;transition:color .2s}
+.founder-contact a:hover{color:var(--amber)}
+.process-steps{display:flex;flex-direction:column;gap:0}
+.proc-item{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--line)}
+.proc-item:last-child{border-bottom:none}
+.proc-n{font-size:1.4rem;font-weight:900;color:var(--line);letter-spacing:-.03em;line-height:1;padding-top:2px}
+.proc-title{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:4px}
+.proc-p{font-size:.8rem;font-weight:400;color:var(--mid);line-height:1.65}
+
+/* ── TESTIMONIAL ── */
+.testi{background:var(--off);border-top:1px solid var(--line);padding:60px 52px}
+.testi-card{max-width:700px;margin:0 auto;text-align:center}
+.testi-q{font-size:1.15rem;font-weight:600;color:var(--ink);line-height:1.65;letter-spacing:-.01em;margin-bottom:28px}
+.testi-q strong{color:var(--amber)}
+.testi-bar{width:36px;height:2px;background:var(--amber);margin:0 auto 20px}
+.testi-name{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.testi-loc{font-size:.65rem;font-weight:400;color:var(--muted);margin-top:2px}
+
+/* ── CTA ── */
+.cta-sec{background:var(--ink);padding:80px 52px}
+.cta-inner{display:flex;flex-direction:column;align-items:center;gap:32px;max-width:780px;margin:0 auto;text-align:center}
+.cta-sec .sec-label{color:var(--amber)}
+.cta-sec .sec-h{color:#fff}
+.cta-sub{font-size:.88rem;font-weight:400;color:rgba(255,255,255,.5);line-height:1.75;max-width:520px;margin-top:12px}
+.cta-btns{display:flex;flex-direction:row;gap:12px;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--ink);padding:15px 32px;border-radius:5px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:all .2s;display:block;text-align:center}
+.btn-white:hover{background:var(--amber);color:#fff;transform:translateY(-2px)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6);padding:15px 32px;border-radius:5px;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:all .2s;display:block;text-align:center}
+.btn-outline:hover{border-color:rgba(255,255,255,.6);color:#fff}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:44px 52px}
+.footer-inner{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px;align-items:start}
+.footer-logo{font-size:.7rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.footer-tag{font-size:.78rem;font-weight:400;color:rgba(255,255,255,.35);line-height:1.65;max-width:260px}
+.f-col-title{font-size:.57rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:.78rem;font-weight:400;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:rgba(255,255,255,.9)}
+.footer-bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center}
+.footer-copy{font-size:.65rem;font-weight:400;color:rgba(255,255,255,.2)}
+.footer-city{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.15)}
+
+/* ── SCROLL REVEAL ── */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
+
+/* ── MOBILE ── */
+@media(max-width:900px){
+  nav{padding:14px 24px}
+  nav.sc{padding:10px 24px}
+  .nav-links{display:none}
+  .nav-burger{display:flex}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-l{padding:36px 24px 48px;border-right:none}
+  .hero-r{display:none}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:20px 0}
+  .hst{border-right:none;border-bottom:1px solid var(--line);padding:0 0 16px 0}
+  .hst:nth-child(odd){border-right:1px solid var(--line);padding-right:16px}
+  .hst:nth-last-child(-n+2){border-bottom:none;padding-bottom:0}
+  .sec{padding:56px 24px}
+  .testi{padding:52px 24px}
+  .cta-sec{padding:60px 24px}
+  footer{padding:40px 24px}
+  .proof-bar{padding:12px 16px}.proof-item{padding:6px 16px}
+  .svc-intro,.why-intro,.port-intro,.pricing-intro,
+  
+  .svc-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .why-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding-right:0;padding-bottom:32px}
+  .why-item:not(:first-child){padding-left:0}
+  .why-item:last-child{border-bottom:none}
+  .web-grid{grid-template-columns:1fr 1fr}
+  .photo-grid{columns:2}
+  .price-grid{grid-template-columns:1fr 1fr}
+  .price-grid.two-col{grid-template-columns:1fr;max-width:100%}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .footer-inner{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;gap:6px;text-align:center}
+  
+}
+@media(max-width:540px){
+  .hero-h{font-size:2.6rem}
+  .web-grid{grid-template-columns:1fr}
+  .price-grid{grid-template-columns:1fr}
+  .photo-grid{columns:1}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body style="background:#ffffff">
+<div id="cur"></div><div id="cur-r"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="logo"><span class="logo-dot"></span>Proview Media</a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#portfolio">Work</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="nav-cta">Book a Free Call</a>
+  </div>
+  <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <button id="mobile-close">&#x2715;</button>
+  <a href="#services" class="mob-link">Services</a>
+  <a href="#portfolio" class="mob-link">Work</a>
+  <a href="#pricing" class="mob-link">Pricing</a>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#contact" class="mob-link">Book a Free Call</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-l">
+    <div class="hero-badge rv"><span class="hero-dot"></span>Las Vegas Web Design Agency</div>
+    <h1 class="hero-h rv d1">Your Business<br>Deserves A<br><span>Better Website.</span></h1>
+    <p class="hero-sub rv d2">Most small business websites look outdated, load slowly, and lose customers before they even call. We build custom websites that make your phone ring — no templates, no agencies, just Melvin and Jen working directly with you.</p>
+    <div class="hero-actions rv d3">
+      <a href="https://book.squareup.com/appointments/tkriilxpux7frn/location/L6PQDV72VNZBT/services" target="_blank" class="btn btn-dark">Book a Free Call</a>
+      <a href="#portfolio" class="btn btn-ghost">View Our Work</a>
+    </div>
+    <div class="hero-stats rv">
+      <div class="hst"><span class="hst-n">8+</span><span class="hst-l">Yrs Experience</span></div>
+      <div class="hst"><span class="hst-n">20+</span><span class="hst-l">Sites Launched</span></div>
+      <div class="hst"><span class="hst-n">LV</span><span class="hst-l">Las Vegas, NV</span></div>
+      <div class="hst"><span class="hst-n">FAA</span><span class="hst-l">Part 107 Cert.</span></div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <img src="https://framerusercontent.com/images/L57nL1L5I9KMb6hNMHuao2HQWzA.jpg" alt="Web design work by Proview Media Las Vegas" loading="eager">
+    <div class="hero-tag">
+      <div class="hero-tag-title">Proviewmediaco.com</div>
+      <div class="hero-tag-sub">Las Vegas, Nevada &mdash; Est. 2017</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-track">
+    <span class="proof-item">Custom Design, No Templates</span><span class="proof-item">Mobile-First &amp; SEO-Ready</span><span class="proof-item">Direct Owner Access</span><span class="proof-item">Las Vegas Local</span><span class="proof-item">Free Consultation</span><span class="proof-item">8+ Years Experience</span><span class="proof-item">FAA Part 107 Certified</span><span class="proof-item">Results-Driven Strategy</span><span class="proof-item">Custom Design, No Templates</span><span class="proof-item">Mobile-First &amp; SEO-Ready</span><span class="proof-item">Direct Owner Access</span><span class="proof-item">Las Vegas Local</span><span class="proof-item">Free Consultation</span><span class="proof-item">8+ Years Experience</span><span class="proof-item">FAA Part 107 Certified</span><span class="proof-item">Results-Driven Strategy</span>
+</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="services sec">
+  <div class="svc-intro rv">
+    <div>
+      <span class="sec-label">What We Do</span>
+      <h2 class="sec-h">One Team.<br>Everything You Need <span>Online.</span></h2>
+    </div>
+    <p class="sec-sub">From your first website to a full digital presence — strategy, design, and execution under one roof. You talk to the people doing the work, not a project manager.</p>
+  </div>
+  <div class="svc-grid rv d1">
+    <div class="svc-card svc-card-primary">
+      <div class="svc-num">01</div>
+      <div class="svc-name">Web Design &amp; Development</div>
+      <p class="svc-desc">A website that looks as good as your business actually is. Built from scratch, fast on every device, and designed to turn visitors into calls, bookings, and sales.</p>
+      <div class="svc-tags"><span class="svc-tag">Custom Design</span><span class="svc-tag">Mobile-First</span><span class="svc-tag">SEO-Ready</span><span class="svc-tag">E-Commerce</span><span class="svc-tag">Booking Systems</span></div>
+      <a href="#pricing" class="svc-cta">See Pricing &#x2192;</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">02</div>
+      <div class="svc-name">SEO &amp; Digital Marketing</div>
+      <p class="svc-desc">Your next customer is searching Google right now. We make sure they find you first — not your competitor down the street.</p>
+      <div class="svc-tags"><span class="svc-tag">Local SEO</span><span class="svc-tag">Google Business</span><span class="svc-tag">Content</span><span class="svc-tag">Analytics</span></div>
+      <a href="#contact" class="svc-cta">Get Started &#x2192;</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">03</div>
+      <div class="svc-name">Branding &amp; Identity</div>
+      <p class="svc-desc">A brand that builds trust before you say a word. Logo, colors, and visual identity that tell customers you are the real deal.</p>
+      <div class="svc-tags"><span class="svc-tag">Logo Design</span><span class="svc-tag">Brand Guidelines</span><span class="svc-tag">Visual Identity</span><span class="svc-tag">Print</span></div>
+      <a href="#contact" class="svc-cta">Get Started &#x2192;</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">04</div>
+      <div class="svc-name">Photography</div>
+      <p class="svc-desc">Bad photos cost you customers. Professional brand and product photography that makes your business look as good online as it does in person.</p>
+      <div class="svc-tags"><span class="svc-tag">Brand Photos</span><span class="svc-tag">Product</span><span class="svc-tag">Real Estate</span><span class="svc-tag">Events</span></div>
+      <a href="#pricing" class="svc-cta">See Pricing &#x2192;</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why sec">
+  <div class="why-intro rv">
+    <div>
+      <span class="sec-label">Why Proview</span>
+      <h2 class="sec-h">No Account Managers.<br>No <span>Handoffs. Just Us.</span></h2>
+    </div>
+    <p class="sec-sub" style="color:rgba(255,255,255,.45)">Most agencies hand you off to a junior team after the sale. With Proview, you have our direct number from day one to launch day and beyond.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item rv">
+      <div class="why-num">01</div>
+      <div class="why-t">Direct Owner Access</div>
+      <p class="why-p">Text or email Melvin directly. No ticketing systems, no waiting 3 days for a response. Real answers from the person actually building your site.</p>
+    </div>
+    <div class="why-item rv d1">
+      <div class="why-num">02</div>
+      <div class="why-t">Las Vegas Focused</div>
+      <p class="why-p">We live and work here. We know the Las Vegas market, local SEO, and what makes customers in this city trust a business enough to call.</p>
+    </div>
+    <div class="why-item rv d2">
+      <div class="why-num">03</div>
+      <div class="why-t">Results, Not Just Design</div>
+      <p class="why-p">A website that only looks good is just art. Ours are built to rank on Google, load fast, and give customers every reason to choose you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio sec">
+  <div class="port-intro rv">
+    <div>
+      <span class="sec-label">Our Work</span>
+      <h2 class="sec-h">Real Work for<br><span>Real Las Vegas Businesses.</span></h2>
+    </div>
+    <div class="port-tabs">
+      <button class="ptab active" data-panel="webdesign">Web Design</button>
+      <button class="ptab" data-panel="photography">Photography</button>
+    </div>
+  </div>
+  <div class="port-panel visible" id="panel-webdesign">
+    <div id="web-filters" class="port-filters rv">
+      <button class="pfil active" data-group="all-web">All</button>
+      <button class="pfil" data-group="business">Business</button>
+      <button class="pfil" data-group="personal">Personal</button>
+    </div>
+    <div class="web-grid rv d1">
+      <a href="https://dardanos.com" target="_blank" class="web-card web-group business">
+        <div class="web-img"><img src="https://framerusercontent.com/images/UUHqgAuzwrXx6DEFTPqbDU2aIU.png" alt="Dardanos website Las Vegas" loading="lazy"></div>
+        <div class="web-info"><div class="web-title">Dardanos</div><div class="web-url">dardanos.com</div><span class="web-tag">Brand Site</span></div>
+      </a>
+      <a href="https://ezshoerepair.com" target="_blank" class="web-card web-group business">
+        <div class="web-img"><img src="https://framerusercontent.com/images/OH7VIeWTWYZsqFgUc8ny7zNZn4.png" alt="EZ Shoe Repair website" loading="lazy"></div>
+        <div class="web-info"><div class="web-title">EZ Shoe Repair</div><div class="web-url">ezshoerepair.com</div><span class="web-tag">Local Business</span></div>
+      </a>
+      <a href="https://www.firstfamilyinsurance.com" target="_blank" class="web-card web-group business">
+        <div class="web-img"><img src="https://framerusercontent.com/images/usE2P1IMO4xyYjKes062L4jvlg.png" alt="First Family Insurance" loading="lazy"></div>
+        <div class="web-info"><div class="web-title">First Family Insurance</div><div class="web-url">firstfamilyinsurance.com</div><span class="web-tag">Insurance</span></div>
+      </a>
+      <a href="https://thoroughgenemassage.com" target="_blank" class="web-card web-group business">
+        <div class="web-img"><img src="https://framerusercontent.com/images/uRDu4di44KNchV8ZtRs55rVI.png" alt="Thoroughgene Massage website" loading="lazy"></div>
+        <div class="web-info"><div class="web-title">Thoroughgene Massage</div><div class="web-url">thoroughgenemassage.com</div><span class="web-tag">Wellness</span></div>
+      </a>
+      <a href="https://melvinmorales.com" target="_blank" class="web-card web-group personal" style="display:none">
+        <div class="web-img"><img src="https://framerusercontent.com/images/qpoazjrRR9T8TWHlZMoIT8oPkU.png" alt="Melvin Morales portfolio" loading="lazy"></div>
+        <div class="web-info"><div class="web-title">Melvin Morales</div><div class="web-url">melvinmorales.com</div><span class="web-tag">Portfolio</span></div>
+      </a>
+    </div>
+  </div>
+  <div class="port-panel" id="panel-photography">
+    <div id="photo-filters" class="port-filters rv">
+      <button class="pfil active" data-group="family">Family</button>
+      <button class="pfil" data-group="portrait">Portrait</button>
+      <button class="pfil" data-group="maternity">Maternity</button>
+      <button class="pfil" data-group="commercial">Commercial</button>
+      <button class="pfil" data-group="realestate">Real Estate</button>
+    </div>
+    <div class="photo-grid rv d1">
+      <div class="photo-group visible" data-group="family">
+        <div class="pg-item"><img src="https://framerusercontent.com/images/NvX2mHe01GnooSmF7tizHVF2w.jpg" alt="Family photography Las Vegas" loading="lazy"></div>
+        <div class="pg-item"><img src="https://framerusercontent.com/images/Tx6vJTX1zM15d87nQpojLfEkL0.jpg" alt="Family session Las Vegas" loading="lazy"></div>
+        <div class="pg-item"><img src="https://framerusercontent.com/images/Ou7pexyLU2YiuyDsfeZSER6E.jpg" alt="Family portrait outdoor" loading="lazy"></div>
+        <div class="pg-item"><img src="https://framerusercontent.com/images/eKADyh3xogjDs8LSQrJZnW5bYQQ.jpg" alt="Family photography" loading="lazy"></div>
+        <div class="pg-item"><img src="https://framerusercontent.com/images/Fr5bAvgowKoxfHjNOEhpj8zla4.jpg" alt="Family session outdoor" loading="lazy"></div>
+        <div class="pg-item"><img src="https://framerusercontent.com/images/SxhJHlgDsj0A2Bc78VI7idDvmk.jpg" alt="Family portrait Las Vegas" loading="lazy"></div>
+      </div>
+      <div class="photo-group" data-group="portrait">
+        <div class="pg-item"><img src="https://framerusercontent.com/images/i7hOGgQkHwc1Up5ZoPSysmeygM.jpg" alt="Portrait photography Las Vegas" loading="lazy"></div>
+      </div>
+      <div class="photo-group" data-group="maternity">
+        <div class="pg-item"><img src="https://framerusercontent.com/images/ADJeJXiptjA12Y7JWxN5AhUYo.jpg" alt="Maternity portrait session" loading="lazy"></div>
+        <div class="pg-item"><img src="https://framerusercontent.com/images/Dbup6vVOyJqiqHAAgNPVz0WRI.jpg" alt="Maternity session Nevada" loading="lazy"></div>
+        <div class="pg-item"><img src="https://framerusercontent.com/images/S9XYluU2OL4UJOdQbSv7lC1vK8.jpg" alt="Maternity portrait" loading="lazy"></div>
+      </div>
+      <div class="photo-group" data-group="commercial">
+        <div class="pg-item"><img src="https://framerusercontent.com/images/Aa0zZkPvyJXiJkbqBym0YxgS4.jpg" alt="Product photography Las Vegas" loading="lazy"></div>
+        <div class="pg-item"><img src="https://framerusercontent.com/images/L6M6vMeqr4OxCAWJm97XvN5L8.jpg" alt="Commercial photography Las Vegas" loading="lazy"></div>
+      </div>
+      <div class="photo-group" data-group="realestate">
+        <div class="pg-item"><img src="https://framerusercontent.com/images/pWwFvKPSFQJVoK8jb10lSmW4U.jpg" alt="Real estate photography Las Vegas" loading="lazy"></div>
+        <div class="pg-item"><img src="https://framerusercontent.com/images/CKpXrY6WMtO3ztbYMjrg16Kh70.jpg" alt="Real estate photography Nevada" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing sec">
+  <div class="pricing-intro rv">
+    <div>
+      <span class="sec-label">Pricing</span>
+      <h2 class="sec-h">Honest Pricing.<br><span>No Surprises.</span></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:16px">
+      <p class="sec-sub" style="margin-top:0">We'll tell you exactly what things cost before any work begins. Start with a free 30-minute call — no pitch, no pressure, just an honest conversation.</p>
+      <div class="pricing-toggle">
+        <button class="prtab active" data-pricing="webdesign">Web Design</button>
+        <button class="prtab" data-pricing="photography">Photography</button>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-panel visible" id="pricing-webdesign">
+    <div class="price-grid two-col rv">
+      <div class="price-card featured">
+        <span class="price-badge">Core Service</span>
+        <div class="price-name">Web Design</div>
+        <div class="price-amount">Custom<span class="price-note"> / consultation</span></div>
+        <p class="price-tagline">Built from scratch for your business. No themes, no page builders — just clean, fast code that ranks and converts.</p>
+        <div class="price-divider"></div>
+        <ul class="price-list">
+          <li>Free 30-min consultation</li>
+          <li>100% custom, no templates</li>
+          <li>Mobile-first and fast</li>
+          <li>SEO-optimized from day one</li>
+          <li>E-commerce and booking ready</li>
+          <li>Ongoing support available</li>
+        </ul>
+        <a href="mailto:proviewmediaco@gmail.com" class="price-cta">Start a Conversation</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Branding</div>
+        <div class="price-amount">Custom<span class="price-note"> / consultation</span></div>
+        <p class="price-tagline">Logo, visual identity, photography, and everything you need to look like the most credible business in your space.</p>
+        <div class="price-divider"></div>
+        <ul class="price-list">
+          <li>Free 30-min consultation</li>
+          <li>Logo and visual identity</li>
+          <li>Brand photography session</li>
+          <li>Design system and guidelines</li>
+          <li>Web, print, and digital assets</li>
+          <li>Full commercial usage rights</li>
+        </ul>
+        <a href="mailto:proviewmediaco@gmail.com" class="price-cta">Start a Conversation</a>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-panel" id="pricing-photography">
+    <div class="price-grid rv">
+      <div class="price-card">
+        <div class="price-name">Portrait Session</div>
+        <div class="price-amount">$150<span class="price-note"> / session</span></div>
+        <p class="price-tagline">Individuals, couples, or families. 1-hour guided session.</p>
+        <div class="price-divider"></div>
+        <ul class="price-list"><li>1-hour session</li><li>15 edited photos</li><li>Digital delivery</li></ul>
+        <a href="https://book.squareup.com/appointments/tkriilxpux7frn/location/L6PQDV72VNZBT/services" target="_blank" class="price-cta">Book Now</a>
+      </div>
+      <div class="price-card featured">
+        <span class="price-badge">Popular</span>
+        <div class="price-name">Special Event</div>
+        <div class="price-amount">$250<span class="price-note"> / session</span></div>
+        <p class="price-tagline">Gender reveals, graduations, milestones — timeless style.</p>
+        <div class="price-divider"></div>
+        <ul class="price-list"><li>1-hour coverage</li><li>Full edited gallery</li><li>Print and web-ready files</li></ul>
+        <a href="https://book.squareup.com/appointments/tkriilxpux7frn/location/L6PQDV72VNZBT/services" target="_blank" class="price-cta">Book Now</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Product Photography</div>
+        <div class="price-amount">Custom<span class="price-note"> / quote</span></div>
+        <p class="price-tagline">E-commerce, catalogs, and marketing assets.</p>
+        <div class="price-divider"></div>
+        <ul class="price-list"><li>Studio or on-location</li><li>Commercial usage rights</li><li>Fast turnaround</li></ul>
+        <a href="mailto:proviewmediaco@gmail.com" class="price-cta">Get a Quote</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Commercial Photography</div>
+        <div class="price-amount">Custom<span class="price-note"> / quote</span></div>
+        <p class="price-tagline">Businesses and real estate. Brand impact focused.</p>
+        <div class="price-divider"></div>
+        <ul class="price-list"><li>On-location</li><li>Businesses and real estate</li><li>Commercial usage rights</li></ul>
+        <a href="mailto:proviewmediaco@gmail.com" class="price-cta">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT + PROCESS -->
+<section id="about" class="about sec">
+  <div class="about-grid">
+    <div class="rv">
+      <span class="sec-label">Who We Are</span>
+      <div class="founder-wrap">
+        <div class="founder-photo"><img src="data:image/jpeg;base64,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" alt="Melvin Morales Proview Media Las Vegas"></div>
+        <div><div class="founder-name">Melvin Morales</div><div class="founder-role">Founder, Proview Media Co.</div></div>
+      </div>
+      <p class="founder-bio">Most web agencies in Las Vegas are just resellers — they outsource your project and mark it up. I built Proview because local businesses deserve better. With 8 years in product design and a background in legal tech, I approach every website like a business problem, not a design exercise. You get my direct number, my honest opinion, and work I am genuinely proud to put my name on.</p>
+      <div class="founder-contact">
+        <a href="mailto:proviewmediaco@gmail.com">proviewmediaco@gmail.com</a>
+        <a href="https://www.instagram.com/proviewmediaco/" target="_blank">@proviewmediaco</a>
+      </div>
+    </div>
+    <div class="rv d1">
+      <span class="sec-label">How We Work</span>
+      <h2 class="sec-h" style="margin-bottom:32px">From Call to Launch<br><span>In Weeks, Not Months.</span></h2>
+      <div class="process-steps">
+        <div class="proc-item">
+          <div class="proc-n">01</div>
+          <div><div class="proc-title">Free Discovery Call</div><p class="proc-p">A free 30-minute call to understand your business, your goals, and what success actually looks like for you. No pitch, no pressure.</p></div>
+        </div>
+        <div class="proc-item">
+          <div class="proc-n">02</div>
+          <div><div class="proc-title">Strategy &amp; Proposal</div><p class="proc-p">You get a written proposal with everything spelled out — scope, timeline, price. No surprises, ever.</p></div>
+        </div>
+        <div class="proc-item">
+          <div class="proc-n">03</div>
+          <div><div class="proc-title">Design &amp; Build</div><p class="proc-p">We build, you review. Regular updates keep you in the loop without drowning you in revisions and back-and-forth.</p></div>
+        </div>
+        <div class="proc-item">
+          <div class="proc-n">04</div>
+          <div><div class="proc-title">Launch &amp; Grow</div><p class="proc-p">We launch your site and stay available. Need a change next month? Just text us. We're not a set-it-and-forget-it agency.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<div class="testi rv">
+  <div class="testi-card">
+    <p class="testi-q">"Melvin and Jen were <strong>amazing.</strong> They made us feel comfortable the whole time and captured the moments perfectly. We are so happy with how everything turned out — we finally have photos we are proud to show off."</p>
+    <div class="testi-bar"></div>
+    <div class="testi-name">Dustin P.</div>
+    <div class="testi-loc">Client &mdash; Las Vegas, NV</div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section id="contact" class="cta-sec">
+  <div class="cta-inner rv">
+    <div>
+      <span class="sec-label">Let's Work Together</span>
+      <h2 class="sec-h">Let's Build Something<br>Your Customers <span>Can't Ignore.</span></h2>
+      <p class="cta-sub">Book a free 30-minute call. We'll look at your current online presence, talk through what's holding you back, and tell you exactly what we would do differently. No obligation, no sales pitch — just two people who know Las Vegas helping your business win online.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="https://book.squareup.com/appointments/tkriilxpux7frn/location/L6PQDV72VNZBT/services" target="_blank" class="btn-white">Book a Free Call</a>
+      <a href="mailto:proviewmediaco@gmail.com" class="btn-outline">Send an Email</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><span class="logo-dot"></span>Proview Media</div>
+      <p class="footer-tag">Las Vegas web design, SEO, digital marketing, and photography. Built to grow your business.</p>
+    </div>
+    <div>
+      <div class="f-col-title">Services</div>
+      <div class="footer-links">
+        <a href="#services">Web Design</a>
+        <a href="#services">SEO &amp; Marketing</a>
+        <a href="#services">Branding</a>
+        <a href="#services">Photography</a>
+      </div>
+    </div>
+    <div>
+      <div class="f-col-title">Contact</div>
+      <div class="footer-links">
+        <a href="mailto:proviewmediaco@gmail.com">proviewmediaco@gmail.com</a>
+        <a href="tel:+17025271837">(702) 527-1837</a>
+        <a href="https://www.instagram.com/proviewmediaco/" target="_blank">@proviewmediaco</a>
+        <a href="https://book.squareup.com/appointments/tkriilxpux7frn/location/L6PQDV72VNZBT/services" target="_blank">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2025 Proview Media Co. All rights reserved.</div>
+    <div class="footer-city">Las Vegas, Nevada</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var cur=document.getElementById('cur'),curR=document.getElementById('cur-r');
+  document.addEventListener('mousemove',function(e){
+    if(cur){cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';}
+    if(curR){curR.style.left=e.clientX+'px';curR.style.top=e.clientY+'px';}
+  });
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){if(nav)nav.classList.toggle('sc',window.scrollY>40);});
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.08});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var burger=document.getElementById('nav-burger'),menu=document.getElementById('mobile-menu'),close=document.getElementById('mobile-close');
+  function open(){menu.style.display='flex';document.body.style.overflow='hidden';burger.classList.add('open');}
+  function shut(){menu.style.display='none';document.body.style.overflow='';burger.classList.remove('open');}
+  if(burger)burger.addEventListener('click',open);
+  if(close)close.addEventListener('click',shut);
+  document.querySelectorAll('.mob-link').forEach(function(l){
+    l.addEventListener('click',function(e){
+      e.preventDefault();
+      var t=document.querySelector(l.getAttribute('href'));
+      shut();
+      setTimeout(function(){if(t)t.scrollIntoView({behavior:'smooth'});},50);
+    });
+  });
+  document.querySelectorAll('.ptab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      document.querySelectorAll('.ptab').forEach(function(t){t.classList.remove('active');});
+      tab.classList.add('active');
+      var p=tab.getAttribute('data-panel');
+      document.querySelectorAll('.port-panel').forEach(function(x){x.classList.remove('visible');});
+      var el=document.getElementById('panel-'+p);
+      if(el)el.classList.add('visible');
+    });
+  });
+  document.querySelectorAll('#web-filters .pfil').forEach(function(f){
+    f.addEventListener('click',function(){
+      document.querySelectorAll('#web-filters .pfil').forEach(function(x){x.classList.remove('active');});
+      f.classList.add('active');
+      var g=f.getAttribute('data-group');
+      document.querySelectorAll('.web-group').forEach(function(c){c.style.display=(g==='all-web'||c.classList.contains(g))?'':'none';});
+    });
+  });
+  document.querySelectorAll('#photo-filters .pfil').forEach(function(f){
+    f.addEventListener('click',function(){
+      document.querySelectorAll('#photo-filters .pfil').forEach(function(x){x.classList.remove('active');});
+      f.classList.add('active');
+      var g=f.getAttribute('data-group');
+      document.querySelectorAll('.photo-group').forEach(function(x){x.style.display=x.getAttribute('data-group')===g?'block':'none';});
+    });
+  });
+  document.querySelectorAll('.prtab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      document.querySelectorAll('.prtab').forEach(function(t){t.classList.remove('active');});
+      tab.classList.add('active');
+      var k=tab.getAttribute('data-pricing');
+      document.querySelectorAll('.pricing-panel').forEach(function(x){x.classList.remove('visible');});
+      var el=document.getElementById('pricing-'+k);
+      if(el)el.classList.add('visible');
+    });
+  });
+})();
+</script>
+</body>
+</html>
