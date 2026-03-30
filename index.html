@@ -101,7 +101,6 @@ nav.scrolled{
   letter-spacing:-.03em;
   display:flex;align-items:center;gap:10px;
 }
-.logo-mark{width:30px;height:20px;flex-shrink:0}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-links a{font-size:.875rem;font-weight:500;color:var(--muted);transition:color .2s}
 .nav-links a:hover{color:var(--dark)}
@@ -580,7 +579,7 @@ footer{
 
 <!-- ===== NAV ===== -->
 <nav id="nav">
-  <a href="#" class="nav-logo"><svg class="logo-mark" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="24" height="3.8" rx="1.9" fill="currentColor"/><rect x="0" y="20.2" width="18" height="3.8" rx="1.9" fill="currentColor"/><rect x="21" y="0" width="3.8" height="24" fill="currentColor"/><rect x="24.8" y="3" width="13.2" height="18" rx="2" fill="currentColor" opacity=".3"/></svg>Proview Media</a>
+  <a href="#" class="nav-logo">Proview Media</a>
   <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#work">Work</a>
@@ -874,21 +873,32 @@ footer{
     <p class="section-sub rv d2" style="max-width:520px;margin-bottom:12px">Brand photography, portraits, commercial shoots, and events. We capture the moments that make your business feel human.</p>
     <div class="photo-tabs rv d3">
       <button class="photo-tab active" data-filter="all">All</button>
-      <button class="photo-tab" data-filter="portrait">Portraits</button>
-      <button class="photo-tab" data-filter="commercial">Commercial</button>
       <button class="photo-tab" data-filter="family">Family</button>
-      <button class="photo-tab" data-filter="event">Events</button>
+      <button class="photo-tab" data-filter="portrait">Portraits</button>
+      <button class="photo-tab" data-filter="maternity">Maternity</button>
+      <button class="photo-tab" data-filter="commercial">Commercial</button>
+      <button class="photo-tab" data-filter="realestate">Real Estate</button>
     </div>
     <div class="photo-grid rv">
-      <div class="photo-item show" data-cat="portrait"><img src="https://framerusercontent.com/images/Ou7pexyLU2YiuyDsfeZSER6E.jpg" alt="Portrait photography" loading="lazy"></div>
-      <div class="photo-item show" data-cat="commercial"><img src="https://framerusercontent.com/images/NvX2mHe01GnooSmF7tizHVF2w.jpg" alt="Commercial photography" loading="lazy"></div>
-      <div class="photo-item show" data-cat="family"><img src="https://framerusercontent.com/images/Tx6vJTX1zM15d87nQpojLfEkL0.jpg" alt="Family photography" loading="lazy"></div>
-      <div class="photo-item show" data-cat="portrait"><img src="https://framerusercontent.com/images/eKADyh3xogjDs8LSQrJZnW5bYQQ.jpg" alt="Portrait session" loading="lazy"></div>
-      <div class="photo-item show" data-cat="commercial"><img src="https://framerusercontent.com/images/L6M6vMeqr4OxCAWJm97XvN5L8.jpg" alt="Commercial brand photography" loading="lazy"></div>
-      <div class="photo-item show" data-cat="family"><img src="https://framerusercontent.com/images/Aa0zZkPvyJXiJkbqBym0YxgS4.jpg" alt="Family portrait" loading="lazy"></div>
-      <div class="photo-item show" data-cat="event"><img src="https://framerusercontent.com/images/ADJeJXiptjA12Y7JWxN5AhUYo.jpg" alt="Event photography" loading="lazy"></div>
-      <div class="photo-item show" data-cat="portrait"><img src="https://framerusercontent.com/images/Fr5bAvgowKoxfHjNOEhpj8zla4.jpg" alt="Outdoor portrait session" loading="lazy"></div>
-      <div class="photo-item show" data-cat="commercial"><img src="https://framerusercontent.com/images/i7hOGgQkHwc1Up5ZoPSysmeygM.jpg" alt="Brand photography session" loading="lazy"></div>
+      <!-- Family -->
+      <div class="photo-item show" data-cat="family"><img src="https://framerusercontent.com/images/NvX2mHe01GnooSmF7tizHVF2w.jpg" alt="Family photography session" loading="lazy"></div>
+      <div class="photo-item show" data-cat="family"><img src="https://framerusercontent.com/images/Tx6vJTX1zM15d87nQpojLfEkL0.jpg" alt="Family session outdoors" loading="lazy"></div>
+      <div class="photo-item show" data-cat="family"><img src="https://framerusercontent.com/images/Ou7pexyLU2YiuyDsfeZSER6E.jpg" alt="Family portrait outdoor" loading="lazy"></div>
+      <div class="photo-item show" data-cat="family"><img src="https://framerusercontent.com/images/eKADyh3xogjDs8LSQrJZnW5bYQQ.jpg" alt="Family photography" loading="lazy"></div>
+      <div class="photo-item show" data-cat="family"><img src="https://framerusercontent.com/images/Fr5bAvgowKoxfHjNOEhpj8zla4.jpg" alt="Family session outdoor" loading="lazy"></div>
+      <div class="photo-item show" data-cat="family"><img src="https://framerusercontent.com/images/SxhJHlgDsj0A2Bc78VI7idDvmk.jpg" alt="Family portrait" loading="lazy"></div>
+      <!-- Portrait -->
+      <div class="photo-item show" data-cat="portrait"><img src="https://framerusercontent.com/images/i7hOGgQkHwc1Up5ZoPSysmeygM.jpg" alt="Portrait photography" loading="lazy"></div>
+      <!-- Maternity -->
+      <div class="photo-item show" data-cat="maternity"><img src="https://framerusercontent.com/images/ADJeJXiptjA12Y7JWxN5AhUYo.jpg" alt="Maternity portrait session" loading="lazy"></div>
+      <div class="photo-item show" data-cat="maternity"><img src="https://framerusercontent.com/images/Dbup6vVOyJqiqHAAgNPVz0WRI.jpg" alt="Maternity session" loading="lazy"></div>
+      <div class="photo-item show" data-cat="maternity"><img src="https://framerusercontent.com/images/S9XYluU2OL4UJOdQbSv7lC1vK8.jpg" alt="Maternity portrait" loading="lazy"></div>
+      <!-- Commercial -->
+      <div class="photo-item show" data-cat="commercial"><img src="https://framerusercontent.com/images/Aa0zZkPvyJXiJkbqBym0YxgS4.jpg" alt="Product photography" loading="lazy"></div>
+      <div class="photo-item show" data-cat="commercial"><img src="https://framerusercontent.com/images/L6M6vMeqr4OxCAWJm97XvN5L8.jpg" alt="Commercial photography" loading="lazy"></div>
+      <!-- Real Estate -->
+      <div class="photo-item show" data-cat="realestate"><img src="https://framerusercontent.com/images/pWwFvKPSFQJVoK8jb10lSmW4U.jpg" alt="Real estate photography" loading="lazy"></div>
+      <div class="photo-item show" data-cat="realestate"><img src="https://framerusercontent.com/images/CKpXrY6WMtO3ztbYMjrg16Kh70.jpg" alt="Real estate photography" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -1040,7 +1050,7 @@ footer{
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="#" class="nav-logo"><svg class="logo-mark" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="24" height="3.8" rx="1.9" fill="currentColor"/><rect x="0" y="20.2" width="18" height="3.8" rx="1.9" fill="currentColor"/><rect x="21" y="0" width="3.8" height="24" fill="currentColor"/><rect x="24.8" y="3" width="13.2" height="18" rx="2" fill="currentColor" opacity=".3"/></svg>Proview Media</a>
+        <a href="#" class="nav-logo">Proview Media</a>
         <p>Digital experiences, websites, and apps. Based in Las Vegas, working with clients everywhere.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/proviewmediaco/" target="_blank" rel="noopener">
