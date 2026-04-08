@@ -20,10 +20,50 @@ html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
 
 /* Nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:var(--bg);border-bottom:1px solid #edebe4}
-.logo{font-size:1.05rem;font-weight:600;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:8px}
-.back-link{font-size:.85rem;font-weight:500;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:6px;opacity:.6;transition:opacity .2s}
-.back-link:hover{opacity:1}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 48px;
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+  background:rgba(252,250,248,.95);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid #edebe4;
+}
+.nav-logo{
+  font-family:'Inter Tight','Inter',sans-serif;
+  font-size:1.05rem;font-weight:700;color:#07081f;
+  letter-spacing:-.03em;
+}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:.875rem;font-weight:500;color:#555;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#07081f}
+.nav-cta{
+  background:#07081f;color:#fff !important;
+  padding:10px 24px;border-radius:50px;
+  font-size:.85rem;font-weight:600;
+  transition:background .2s,transform .2s;
+}
+.nav-cta:hover{background:#1a1b3a;transform:translateY(-1px)}
+.nav-burger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:6px;z-index:1100;
+}
+.nav-burger span{display:block;width:22px;height:2px;background:#07081f;border-radius:2px;transition:all .3s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mobile-menu{
+  display:none;position:fixed;inset:0;background:#fcfaf8;z-index:1050;
+  flex-direction:column;justify-content:center;align-items:center;gap:0;
+}
+#mobile-menu.open{display:flex}
+.mob-link{
+  font-size:1.5rem;font-weight:600;color:#07081f;text-decoration:none;
+  padding:20px 0;width:80%;text-align:center;
+  border-bottom:1px solid #edebe4;transition:color .2s;
+}
+.mob-link:last-child{border-bottom:none}
+.mob-link:hover{color:#f15533}
 
 /* Page */
 .page{max-width:720px;margin:0 auto;padding:140px 24px 80px}
@@ -74,6 +114,10 @@ textarea{min-height:140px;resize:vertical}
 .contact-info a{font-size:.85rem;color:#555;text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
 .contact-info a:hover{color:var(--dark)}
 
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-burger{display:flex}
+}
 @media(max-width:600px){
   nav{padding:16px 20px}
   .page{padding:110px 20px 60px}
@@ -84,10 +128,28 @@ textarea{min-height:140px;resize:vertical}
 </head>
 <body>
 
-<nav>
-  <a href="./" class="logo">Proview Media</a>
-  <a href="./" class="back-link">&larr; Back to Home</a>
+<nav id="nav">
+  <a href="./" class="nav-logo">Proview Media</a>
+  <div class="nav-links">
+    <a href="./#services">Services</a>
+    <a href="./#work">Work</a>
+    <a href="./#photography">Photography</a>
+    <a href="./#process">Process</a>
+    <a href="./#about">About</a>
+    <a href="contact.html" class="nav-cta">Start a Project</a>
+  </div>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div id="mobile-menu">
+  <a href="./#services" class="mob-link" onclick="closeMobile()">Services</a>
+  <a href="./#work" class="mob-link" onclick="closeMobile()">Work</a>
+  <a href="./#photography" class="mob-link" onclick="closeMobile()">Photography</a>
+  <a href="./#process" class="mob-link" onclick="closeMobile()">Process</a>
+  <a href="./#about" class="mob-link" onclick="closeMobile()">About</a>
+  <a href="contact.html" class="mob-link">Start a Project</a>
+</div>
 
 <div class="page">
   <div id="form-view">
@@ -211,6 +273,13 @@ textarea{min-height:140px;resize:vertical}
   </div>
 </div>
 
+<script>
+const nav=document.getElementById('nav');
+const burger=document.getElementById('burger');
+const mobileMenu=document.getElementById('mobile-menu');
+if(burger){burger.addEventListener('click',()=>{burger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':''})}
+function closeMobile(){burger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow=''}
+</script>
 <script>
 // Set the _next redirect to current origin
 var nextInput = document.querySelector('input[name="_next"]');
