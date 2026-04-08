@@ -29,27 +29,27 @@ h2{font-size:clamp(1.3rem,2.5vw,1.6rem);margin-bottom:20px}
 nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   display:flex;align-items:center;justify-content:space-between;
-  padding:20px 48px;
-  transition:all .3s cubic-bezier(.4,0,.2,1);
+  padding:20px var(--h-pad);
+  transition:all .3s var(--ease);
 }
 nav.scrolled{
-  padding:14px 48px;
+  padding:14px var(--h-pad);
   background:rgba(252,250,248,.95);
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid #edebe4;
-}
+  border-bottom:1px solid var(--border);
 }
 .nav-logo{
   font-family:'Inter Tight','Inter',sans-serif;
-  font-size:1.05rem;font-weight:700;color:#07081f;
+  font-size:1.05rem;font-weight:700;color:var(--dark);
   letter-spacing:-.03em;
+  display:flex;align-items:center;gap:10px;
 }
 .nav-links{display:flex;align-items:center;gap:32px}
-.nav-links a{font-size:.875rem;font-weight:500;color:#555;text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:#07081f}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--dark)}
 .nav-cta{
-  background:#07081f;color:#fff !important;
-  padding:10px 24px;border-radius:50px;
+  background:var(--dark);color:#fff !important;
+  padding:10px 24px;border-radius:var(--pill);
   font-size:.85rem;font-weight:600;
   transition:background .2s,transform .2s;
 }
@@ -58,22 +58,22 @@ nav.scrolled{
   display:none;flex-direction:column;gap:5px;
   background:none;border:none;cursor:pointer;padding:6px;z-index:1100;
 }
-.nav-burger span{display:block;width:22px;height:2px;background:#07081f;border-radius:2px;transition:all .3s}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
 .nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .nav-burger.open span:nth-child(2){opacity:0}
 .nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 #mobile-menu{
-  display:none;position:fixed;inset:0;background:#fcfaf8;z-index:1050;
+  display:none;position:fixed;inset:0;background:var(--bg);z-index:1050;
   flex-direction:column;justify-content:center;align-items:center;gap:0;
 }
 #mobile-menu.open{display:flex}
 .mob-link{
-  font-size:1.5rem;font-weight:600;color:#07081f;text-decoration:none;
+  font-size:1.5rem;font-weight:600;color:var(--dark);text-decoration:none;
   padding:20px 0;width:80%;text-align:center;
-  border-bottom:1px solid #edebe4;transition:color .2s;
+  border-bottom:1px solid var(--border);transition:color .2s;
 }
 .mob-link:last-child{border-bottom:none}
-.mob-link:hover{color:#f15533}
+.mob-link:hover{color:var(--coral)}
 
 .hero{padding:80px 0 0}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
@@ -148,6 +148,7 @@ footer{padding:32px var(--h-pad);text-align:center;border-top:1px solid var(--bo
       <div>
         <h1>Marcavo</h1>
         <p class="hero-tagline">A client portal & invoicing platform built from the ground up.</p>
+        <a href="https://marcavo.com" target="_blank" class="hero-link">Visit live site &rarr;</a>
       </div>
       <div class="overview-card">
         <dl>
@@ -189,7 +190,6 @@ footer{padding:32px var(--h-pad);text-align:center;border-top:1px solid var(--bo
     <h2>Start your project.</h2>
     <div class="cta-actions">
       <a href="../contact.html" class="btn btn-coral">Start Your Project</a>
-      <a href="https://marcavo.com" target="_blank" class="btn btn-light">Visit Live Site &rarr;</a>
       <a href="../#work" class="btn btn-light">View More Work</a>
     </div>
   </div>
