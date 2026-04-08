@@ -32,11 +32,12 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:20px v
 .deliverables li::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--project-color);flex-shrink:0}
 .live-link{margin-top:32px}.live-link a{font-size:.9rem;font-weight:600;color:var(--project-color);border-bottom:2px solid var(--project-color);padding-bottom:2px;transition:opacity .2s}.live-link a:hover{opacity:.7}
 .cta-section{padding:var(--section-pad) 0;text-align:center}.cta-section h2{margin-bottom:32px}
+.cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;padding:14px 30px;border-radius:var(--pill);transition:all .25s var(--ease);cursor:pointer;border:none;letter-spacing:-.01em}
 .btn-coral{background:var(--coral);color:#fff}.btn-coral:hover{background:var(--coral-hover);transform:translateY(-2px)}
-.btn-light{background:#f0efec;color:var(--dark);margin-left:12px}.btn-light:hover{background:#e5e3df;transform:translateY(-2px)}
+.btn-light{background:#f0efec;color:var(--dark);}.btn-light:hover{background:#e5e3df;transform:translateY(-2px)}
 footer{padding:40px var(--h-pad);text-align:center;border-top:1px solid var(--border);font-size:.85rem;color:var(--muted)}
-@media(max-width:768px){:root{--h-pad:24px;--section-pad:64px}.overview-grid{grid-template-columns:1fr 1fr}.cta-actions{display:flex;flex-direction:column;gap:12px;align-items:center}.btn-light{margin-left:0}}
+@media(max-width:768px){:root{--h-pad:24px;--section-pad:64px}.overview-grid{grid-template-columns:1fr 1fr}.cta-actions{display:flex;flex-direction:row;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}.btn-light{margin-left:0}}
 @media(max-width:480px){.overview-grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -60,8 +61,6 @@ footer{padding:40px var(--h-pad);text-align:center;border-top:1px solid var(--bo
 <li>Design system for consistency</li>
 <li>Responsive layout across devices</li>
 </ul>
-<div class="live-link"><a href="https://intruity.com" target="_blank">Visit Live Site &rarr;</a></div>
-</div></section>
 <section class="cta-section"><div class="container"><h2>Start your project.</h2><div class="cta-actions">
 <a href="../contact.html" class="btn btn-coral">Start Your Project</a>
 <a href="https://intruity.com" target="_blank" class="btn btn-light">Visit Live Site &rarr;</a>

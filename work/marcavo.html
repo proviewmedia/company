@@ -124,6 +124,7 @@ nav{
 /* CTA */
 .cta-section{padding:var(--section-pad) 0;text-align:center}
 .cta-section h2{margin-bottom:32px}
+.cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
   font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;
@@ -133,7 +134,7 @@ nav{
 }
 .btn-coral{background:var(--coral);color:#fff}
 .btn-coral:hover{background:var(--coral-hover);transform:translateY(-2px)}
-.btn-light{background:#f0efec;color:var(--dark);margin-left:12px}
+.btn-light{background:#f0efec;color:var(--dark);}
 .btn-light:hover{background:#e5e3df;transform:translateY(-2px)}
 
 /* Footer */
@@ -148,7 +149,7 @@ footer{
 @media(max-width:768px){
   :root{--h-pad:24px;--section-pad:64px}
   .overview-grid{grid-template-columns:1fr 1fr}
-  .cta-actions{display:flex;flex-direction:column;gap:12px;align-items:center}
+  .cta-actions{display:flex;flex-direction:row;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}
   .btn-light{margin-left:0}
 }
 @media(max-width:480px){
