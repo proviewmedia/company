@@ -91,10 +91,6 @@ h3{font-size:clamp(2rem,3.5vw,3rem)}
 nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   display:flex;align-items:center;justify-content:space-between;
-  padding:20px var(--h-pad);
-  transition:all .3s var(--ease);
-}
-nav.scrolled{
   padding:14px var(--h-pad);
   background:rgba(252,250,248,.95);
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
@@ -1084,7 +1080,6 @@ footer{
 /* ===== NAV SCROLL ===== */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
 /* ===== MOBILE MENU ===== */

@@ -29,10 +29,6 @@ h2{font-size:clamp(1.3rem,2.5vw,1.6rem);margin-bottom:20px}
 nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   display:flex;align-items:center;justify-content:space-between;
-  padding:20px var(--h-pad);
-  transition:all .3s var(--ease);
-}
-nav.scrolled{
   padding:14px var(--h-pad);
   background:rgba(252,250,248,.95);
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
@@ -199,7 +195,6 @@ footer{padding:32px var(--h-pad);text-align:center;border-top:1px solid var(--bo
 
 <script>
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40)});
 const burger=document.getElementById('burger');
 const mobileMenu=document.getElementById('mobile-menu');
 if(burger){burger.addEventListener('click',()=>{burger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':''})}
