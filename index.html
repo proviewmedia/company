@@ -422,6 +422,14 @@ a.project-card{background:#f7f7f8;text-decoration:none;color:inherit;display:blo
   font-size:.78rem;color:rgba(255,255,255,.5);margin-top:4px;
 }
 
+/* ===== ABOUT ===== */
+.about-me{padding:var(--section-pad) 0}
+.about-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:start}
+.about-left p{font-size:1rem;color:#555;line-height:1.75;margin-top:16px}
+.about-services{background:#f7f7f8;border-radius:12px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.about-service-item{display:flex;align-items:center;gap:8px;font-size:.88rem;font-weight:500;color:#000}
+.about-service-icon{color:#3B82F6;font-size:.8rem}
+
 /* ===== FAQ ===== */
 .faq{background:#f7f7f8;
   padding:var(--section-pad) 0;
@@ -554,6 +562,8 @@ footer{background:#f7f7f8;
   .process-inner{grid-template-columns:1fr;gap:40px}
   .process-left{position:static}
   .testimonials-grid{grid-template-columns:1fr}
+  .about-inner{grid-template-columns:1fr;gap:40px}
+  .about-services{grid-template-columns:1fr 1fr}
   .faq-columns{grid-template-columns:1fr}
   .final-cta-inner{grid-template-columns:1fr;padding:48px 32px}
   .footer-inner{grid-template-columns:1fr;gap:32px}
@@ -690,7 +700,7 @@ footer{background:#f7f7f8;
       </div>
       <div class="mission-right reveal">
         <div class="mission-image">
-          <img src="marcavo-screenshot.png" alt="Proview Media studio work">
+          <img src="marcavo-site.png" alt="Proview Media studio work">
         </div>
       </div>
     </div>
@@ -961,6 +971,67 @@ footer{background:#f7f7f8;
         <div>
           <div class="testimonial-author">Client</div>
           <div class="testimonial-location">Client</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about-me" id="about-me">
+  <div class="container">
+    <div class="about-inner reveal">
+      <div class="about-left">
+        <span class="section-label">About</span>
+        <h3>Hey, I'm Melvin.</h3>
+        <p>I'm the founder of Proview Media — a one-person studio that builds custom software, websites, apps, brands, and shoots photography and drone for small businesses.</p>
+        <p>With 8+ years in product design and development, I've built SaaS platforms like <a href="work/marcavo.html" style="color:#3B82F6;text-decoration:underline">Marcavo</a>, mobile apps like <a href="work/sevn.html" style="color:#3B82F6;text-decoration:underline">SEVN</a> and <a href="work/peelr.html" style="color:#3B82F6;text-decoration:underline">Peelr</a>, and helped dozens of local businesses get online with sites that actually convert.</p>
+        <p>I work directly with every client — no account managers, no handoffs. You text me, I answer. Your project gets my full attention from start to finish.</p>
+        <p style="margin-top:24px;font-weight:600;color:#000">If you think your business is too small for a custom website or app — think again.</p>
+        <a href="contact.html" class="btn btn-dark" style="margin-top:24px">Let's Talk <span class="btn-arrow">&rarr;</span></a>
+      </div>
+      <div class="about-right">
+        <div class="about-services">
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>Custom Software &amp; AI</span>
+          </div>
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>Websites &amp; Web Apps</span>
+          </div>
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>Mobile Apps</span>
+          </div>
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>SaaS Platforms</span>
+          </div>
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>Branding &amp; Logo Design</span>
+          </div>
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>SEO &amp; Digital Marketing</span>
+          </div>
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>E-Commerce &amp; Shopify</span>
+          </div>
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>Photography &amp; Drone</span>
+          </div>
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>UI/UX Design</span>
+          </div>
+          <div class="about-service-item">
+            <span class="about-service-icon">&#x2714;</span>
+            <span>Print &amp; Brand Guidelines</span>
+          </div>
         </div>
       </div>
     </div>
