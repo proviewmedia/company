@@ -34,6 +34,7 @@ nav{
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
 }
+.nav-logo-img{width:24px;height:24px;object-fit:contain;filter:invert(1);border-radius:4px}
 .nav-logo{
   font-family:'Inter Tight','Inter',sans-serif;
   font-size:1.05rem;font-weight:700;color:var(--dark);
@@ -120,7 +121,7 @@ footer{padding:32px var(--h-pad);text-align:center;border-top:1px solid var(--bo
 <body>
 
 <nav id="nav">
-  <a href="../" class="nav-logo">Proview Media</a>
+  <a href="../" class="nav-logo"><img src="../logo.jpg" alt="Proview Media" class="nav-logo-img">Proview Media</a>
   <div class="nav-links">
     <a href="../#services">Services</a>
     <a href="../#work">Work</a>
