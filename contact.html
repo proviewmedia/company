@@ -21,9 +21,9 @@ html{scroll-behavior:smooth;scrollbar-gutter:stable}
 }
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
 
-/* Nav */
+/* ===== NAV ===== */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
   display:flex;align-items:center;justify-content:space-between;
   padding:14px var(--h-pad);
   background:rgba(252,250,248,.95);
@@ -62,7 +62,8 @@ nav{
 .mob-link{
   font-size:1.5rem;font-weight:600;color:var(--dark);text-decoration:none;
   padding:20px 0;width:80%;text-align:center;
-  border-bottom:1px solid var(--border);transition:color .2s;
+  border-bottom:1px solid var(--border);
+  transition:color .2s;
 }
 .mob-link:last-child{border-bottom:none}
 .mob-link:hover{color:var(--coral)}
@@ -117,7 +118,7 @@ textarea{min-height:140px;resize:vertical}
 .contact-info a:hover{color:var(--dark)}
 
 @media(max-width:810px){
-  :root{--h-pad:28px}
+  :root{--h-pad:48px}
   nav{padding:16px var(--h-pad)}
   .nav-links{display:none}
   .nav-burger{display:flex}
