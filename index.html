@@ -41,8 +41,8 @@ html{scroll-behavior:smooth;scrollbar-gutter:stable}
   --bg:#ffffff;
   --dark:#07081f;
   --accent:#1539b0;
-  --coral:#f15533;
-  --coral-hover:#d94425;
+  --coral:#1539b0;
+  --coral-hover:#0f2d8a;
   --text:#07081f;
   --muted:#555;
   --border:#e5e5e5;
@@ -104,7 +104,7 @@ nav{
 }
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-links a{font-size:.875rem;font-weight:500;color:var(--muted);transition:color .2s}
-.nav-links a:hover{color:var(--dark)}
+.nav-links a:hover{color:#1539b0}
 .nav-cta{
   background:var(--dark);color:#fff !important;
   padding:10px 24px;border-radius:var(--pill);
@@ -154,9 +154,9 @@ nav{
   padding:8px 18px;border-radius:var(--pill);
   letter-spacing:-.01em;
 }
-.badge-blue{background:#f5f5f5;color:var(--dark)}
-.badge-orange{background:#f5f5f5;color:var(--dark)}
-.badge-green{background:#f5f5f5;color:var(--dark)}
+.badge-blue{background:#f0f4ff;color:#1539b0;border:1px solid #d0dcf5}
+.badge-orange{background:#f0f4ff;color:#1539b0;border:1px solid #d0dcf5}
+.badge-green{background:#f0f4ff;color:#1539b0;border:1px solid #d0dcf5}
 
 .hero-right{padding-top:8px}
 .hero-right p{
@@ -252,7 +252,7 @@ nav{
   transition:all .3s var(--ease);
   font-size:.9rem;color:var(--muted);line-height:1.7;
 }
-.bc-blue{border-left-color:#e5e5e5}
+.bc-blue{border-left-color:#1539b0}
 .bc-teal{border-left-color:#e5e5e5}
 .bc-green{border-left-color:#e5e5e5}
 .bc-pink{border-left-color:#e5e5e5}
@@ -267,7 +267,7 @@ nav{
 .mission-image img{width:100%;height:100%;object-fit:cover}
 
 /* ===== BENEFITS ===== */
-.benefits{
+.benefits{background:#f7f7f8;
   background:#fff;
   padding:var(--section-pad) 0;
 }
@@ -279,7 +279,7 @@ nav{
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
-.bento-card{
+.bento-card{background:#f7f7f8;
   border:1px solid;
   border-radius:var(--radius);
   overflow:hidden;
@@ -424,7 +424,7 @@ a.project-card{text-decoration:none;color:inherit;display:block}
 }
 
 /* ===== FAQ ===== */
-.faq{
+.faq{background:#f7f7f8;
   padding:var(--section-pad) 0;
   border-top:1px solid var(--border);
 }
@@ -489,7 +489,7 @@ a.project-card{text-decoration:none;color:inherit;display:block}
 .final-cta-image img{width:100%;aspect-ratio:4/3;object-fit:cover}
 
 /* ===== FOOTER ===== */
-footer{
+footer{background:#f7f7f8;
   padding:64px 0 32px;
   border-top:1px solid var(--border);
   background:var(--bg);
@@ -548,7 +548,7 @@ footer{
   .mission-image{max-width:100%}
   .bento{grid-template-columns:1fr;grid-template-rows:auto}
   .bento-span2{grid-column:span 1}
-  .bento-card{min-height:auto}
+  .bento-card{background:#f7f7f8;min-height:auto}
   .photo-callout{padding:0 20px 64px}
   .photo-callout-inner{flex-direction:column;text-align:center;padding:36px 28px;gap:24px}
   .projects-grid{grid-template-columns:1fr}
@@ -709,7 +709,7 @@ footer{
     <div class="bento reveal">
       <div class="bento-card bento-span2 bb-purple">
         <div class="bento-icon" style="background:#f5f5f5">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#07081f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v1"/><path d="M8 7V6a4 4 0 0 1 8 0"/><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M12 15v3"/><circle cx="12" cy="15" r="1"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1539b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v1"/><path d="M8 7V6a4 4 0 0 1 8 0"/><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M12 15v3"/><circle cx="12" cy="15" r="1"/></svg>
         </div>
         <h4>Custom Software &amp; AI</h4>
         <p>Need a tool that doesn't exist? We build one-of-a-kind software, AI-powered workflows, custom dashboards, internal tools, client portals, and automation — designed specifically for how your business operates. No off-the-shelf compromises.</p>
@@ -717,7 +717,7 @@ footer{
       </div>
       <div class="bento-card bb-pink">
         <div class="bento-icon" style="background:#f5f5f5">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#07081f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1539b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
         <h4>Websites &amp; Apps</h4>
         <p>Custom websites, web apps, mobile apps, and SaaS platforms. Built from scratch, fast, and designed to convert.</p>
@@ -725,7 +725,7 @@ footer{
       </div>
       <div class="bento-card bb-green">
         <div class="bento-icon" style="background:#f5f5f5">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#07081f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1539b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
         <h4>Branding &amp; Identity</h4>
         <p>Logo, visual identity, and brand guidelines that make people trust you before you say a word.</p>
@@ -733,7 +733,7 @@ footer{
       </div>
       <div class="bento-card bento-span2 bb-orange">
         <div class="bento-icon" style="background:#f5f5f5">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#07081f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1539b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
         </div>
         <h4>Marketing &amp; SEO</h4>
         <p>SEO, content strategy, and digital marketing that gets you found. We help you show up where it matters and convert the traffic into real customers.</p>
