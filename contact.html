@@ -14,8 +14,8 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scrollbar-gutter:stable}
 :root{
-  --bg:#ffffff;--dark:#07081f;--coral:#3B82F6;--coral-hover:#2563EB;
-  --text:#07081f;--muted:#555;--border:#e5e5e5;
+  --bg:#ffffff;--dark:#000;--coral:#3B82F6;--coral-hover:#2563EB;
+  --text:#000;--muted:#555;--border:#e5e5e5;
   --h-pad:48px;--max-w:1280px;--pill:50px;--ease:cubic-bezier(.4,0,.2,1);
   --accent:#3B82F6;--radius:6px;
 }
@@ -40,12 +40,12 @@ nav{
 .nav-links a{font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--dark)}
 .nav-cta{
-  background:var(--dark);color:#fff !important;
+  background:#3B82F6;color:#fff !important;
   padding:10px 24px;border-radius:var(--pill);
   font-size:.85rem;font-weight:600;
   transition:background .2s,transform .2s;
 }
-.nav-cta:hover{background:#1a1b3a;transform:translateY(-1px)}
+.nav-cta:hover{background:#2563EB;transform:translateY(-1px)}
 .nav-burger{
   display:none;flex-direction:column;gap:5px;
   background:none;border:none;cursor:pointer;padding:6px;z-index:1100;
