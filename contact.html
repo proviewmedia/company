@@ -2,302 +2,249 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start a Project | Proview Studio</title>
+<meta name="description" content="Start a project with Proview Studio. Photography, websites, software, and print for businesses in Las Vegas and the Brazos Valley. Call (702) 527-1837.">
+<meta name="robots" content="index, follow">
 <link rel="icon" type="image/jpeg" href="favicon.jpg">
 <link rel="apple-touch-icon" href="favicon.jpg">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Start a Project | Proview Media Co.</title>
-<meta name="description" content="Tell us about your project. Websites, apps, branding, marketing, or photography — let's build something great together.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scrollbar-gutter:stable}
-:root{
-  --bg:#ffffff;--dark:#000;--coral:#3B82F6;--coral-hover:#2563EB;
-  --text:#000;--muted:#555;--border:#e5e5e5;
-  --h-pad:48px;--max-w:1280px;--pill:50px;--ease:cubic-bezier(.4,0,.2,1);
-  --accent:#3B82F6;--radius:6px;
-}
-a{text-decoration:none;color:inherit}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
-
-/* ===== NAV ===== */
-nav{
-  position:fixed;top:0;left:0;width:100%;z-index:1000;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 48px;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-}
-.nav-logo-img{width:36px;height:36px;object-fit:contain;filter:invert(1);border-radius:6px}
-.nav-logo{text-decoration:none;
-  font-family:'Inter Tight','Inter',sans-serif;
-  font-size:1.05rem;font-weight:700;color:var(--dark);
-  letter-spacing:-.03em;
-  display:flex;align-items:center;gap:10px;
-}
-.nav-links{display:flex;align-items:center;gap:32px}
-.nav-links a{font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--dark)}
-.nav-cta{
-  background:#3B82F6;color:#fff !important;
-  padding:10px 24px;border-radius:var(--pill);
-  font-size:.85rem;font-weight:600;
-  transition:background .2s,transform .2s;
-}
-.nav-cta:hover{background:#2563EB;transform:translateY(-1px)}
-.nav-burger{
-  display:none;flex-direction:column;gap:5px;
-  background:none;border:none;cursor:pointer;padding:6px;z-index:1100;
-}
-.nav-burger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
-.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav-burger.open span:nth-child(2){opacity:0}
-.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-#mobile-menu{
-  display:none;position:fixed;inset:0;background:var(--bg);z-index:1050;
-  flex-direction:column;justify-content:center;align-items:center;gap:0;
-}
-#mobile-menu.open{display:flex}
-.mob-link{
-  font-size:1.5rem;font-weight:600;color:var(--dark);text-decoration:none;
-  padding:20px 0;width:80%;text-align:center;
-  border-bottom:1px solid var(--border);
-  transition:color .2s;
-}
-.mob-link:last-child{border-bottom:none}
-.mob-link:hover{color:var(--coral)}
-
-/* Page */
-.page{max-width:720px;margin:0 auto;padding:140px 24px 80px}
-.page h1{font-size:clamp(2rem,4vw,2.8rem);font-weight:600;line-height:1.15;letter-spacing:-.03em;margin-bottom:12px}
-.page .sub{font-size:1.05rem;color:#555;line-height:1.6;margin-bottom:48px}
-
-/* Form */
-.form-group{margin-bottom:28px}
-.form-label{display:block;font-size:.82rem;font-weight:600;color:var(--dark);margin-bottom:10px;letter-spacing:-.01em}
-.form-label span{color:#999;font-weight:400;margin-left:4px}
-
-/* Service selector */
-.service-options{display:flex;flex-wrap:wrap;gap:8px}
-.service-opt{display:none}
-.service-opt+label{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border:1px solid #ddd;border-radius:100px;font-size:.85rem;font-weight:500;color:#555;cursor:pointer;transition:all .2s;user-select:none}
-.service-opt+label:hover{border-color:var(--dark);color:var(--dark)}
-.service-opt:checked+label{background:var(--dark);color:#fff;border-color:var(--dark)}
-.service-opt+label svg{width:16px;height:16px;opacity:.5}
-.service-opt:checked+label svg{opacity:1}
-
-/* Inputs */
-.input-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-input[type="text"],input[type="email"],textarea{width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:.92rem;color:var(--dark);background:#fff;transition:border-color .2s;outline:none}
-input:focus,textarea:focus{border-color:var(--accent)}
-input::placeholder,textarea::placeholder{color:#aaa}
-textarea{min-height:140px;resize:vertical}
-
-/* Budget */
-.budget-options{display:flex;flex-wrap:wrap;gap:8px}
-.budget-opt{display:none}
-.budget-opt+label{padding:10px 20px;border:1px solid #ddd;border-radius:100px;font-size:.85rem;font-weight:500;color:#555;cursor:pointer;transition:all .2s}
-.budget-opt+label:hover{border-color:var(--dark);color:var(--dark)}
-.budget-opt:checked+label{background:var(--dark);color:#fff;border-color:var(--dark)}
-
-/* Submit */
-.submit-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--coral);color:#fff;border:none;border-radius:100px;font-family:'Inter',sans-serif;font-size:.92rem;font-weight:600;cursor:pointer;transition:all .25s}
-.submit-btn:hover{background:#000;transform:translateY(-2px)}
-.submit-btn svg{width:16px;height:16px}
-
-/* Success */
-.success-msg{display:none;text-align:center;padding:60px 20px}
-.success-msg h2{font-size:1.8rem;font-weight:600;margin-bottom:12px}
-.success-msg p{color:#555;font-size:1rem;line-height:1.6;margin-bottom:32px}
-.success-msg a{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--dark);color:#fff;border-radius:100px;text-decoration:none;font-weight:600;font-size:.85rem}
-
-/* Info bar */
-.contact-info{display:flex;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid #e8e8e8;flex-wrap:wrap}
-.contact-info a{font-size:.85rem;color:#555;text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
-.contact-info a:hover{color:var(--dark)}
-
-@media(max-width:1440px){
-  nav{padding:14px 40px}
-}
-@media(max-width:810px){
-  :root{--h-pad:28px}
-  nav{padding:16px 28px}
-  .nav-links{display:none}
-  .nav-burger{display:flex}
-}
-@media(max-width:600px){
-  .page{padding:110px 20px 60px}
-  .input-row{grid-template-columns:1fr}
-  .contact-info{flex-direction:column;gap:16px}
-}
-</style>
+<link rel="canonical" href="https://www.proviewmediaco.com/contact.html">
+<meta name="geo.region" content="US-NV">
+<meta name="geo.placename" content="Las Vegas, Nevada">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.proviewmediaco.com/contact.html">
+<meta property="og:site_name" content="Proview Studio">
+<meta property="og:title" content="Start a Project | Proview Studio">
+<meta property="og:description" content="Start a project with Proview Studio. Photography, websites, software, and print for businesses in Las Vegas and the Brazos Valley. Call (702) 527-1837.">
+<meta name="twitter:card" content="summary_large_image">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPXLJ01JBK"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EPXLJ01JBK');</script>
+<link rel="stylesheet" href="site.css?v=14">
 </head>
 <body>
 
-<nav id="nav">
-  <a href="./" class="nav-logo"><img src="logo.jpg" alt="Proview Media" class="nav-logo-img">Proview Media</a>
-  <div class="nav-links">
-    <a href="./#services">Services</a>
-    <a href="./#work">Work</a>
-    <a href="./#photography">Photography</a>
-    <a href="./#process">Process</a>
-    <a href="./#about">About</a>
-    <a href="contact.html" class="nav-cta">Start a Project</a>
-  </div>
-  <button class="nav-burger" id="burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div id="mobile-menu">
-  <a href="./#services" class="mob-link" onclick="closeMobile()">Services</a>
-  <a href="./#work" class="mob-link" onclick="closeMobile()">Work</a>
-  <a href="./#photography" class="mob-link" onclick="closeMobile()">Photography</a>
-  <a href="./#process" class="mob-link" onclick="closeMobile()">Process</a>
-  <a href="./#about" class="mob-link" onclick="closeMobile()">About</a>
-  <a href="contact.html" class="mob-link">Start a Project</a>
-</div>
-
-<div class="page">
-  <div id="form-view">
-    <h1>Let's build something together.</h1>
-    <p class="sub">Tell us what you need and we'll get back to you within 24 hours. No pressure, no pitch — just a conversation.</p>
-
-    <form id="contact-form" action="https://formsubmit.co/proviewmediaco@gmail.com" method="POST">
-      <!-- FormSubmit config -->
-      <input type="hidden" name="_subject" value="New Project Inquiry — Proview Media Co.">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="">
-      <input type="text" name="_honey" style="display:none">
-
-      <div class="form-group">
-        <label class="form-label">What do you need?<span>Select all that apply</span></label>
-        <div class="service-options">
-          <input type="checkbox" name="services" value="Custom Software & AI" id="svc-custom" class="service-opt">
-          <label for="svc-custom">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M12 15v3"/><circle cx="12" cy="15" r="1"/><path d="M8 7V6a4 4 0 0 1 8 0v1"/></svg>
-            Custom Software &amp; AI
-          </label>
-
-          <input type="checkbox" name="services" value="Website" id="svc-web" class="service-opt">
-          <label for="svc-web">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            Website
-          </label>
-
-          <input type="checkbox" name="services" value="Web App" id="svc-app" class="service-opt">
-          <label for="svc-app">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-            App
-          </label>
-
-          <input type="checkbox" name="services" value="Branding" id="svc-brand" class="service-opt">
-          <label for="svc-brand">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            Branding
-          </label>
-
-          <input type="checkbox" name="services" value="Marketing & SEO" id="svc-mkt" class="service-opt">
-          <label for="svc-mkt">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-            Marketing &amp; SEO
-          </label>
-
-          <input type="checkbox" name="services" value="Photography" id="svc-photo" class="service-opt">
-          <label for="svc-photo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            Photography
-          </label>
-
-          <input type="checkbox" name="services" value="E-Commerce" id="svc-ecom" class="service-opt">
-          <label for="svc-ecom">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-            E-Commerce
-          </label>
-
-          <input type="checkbox" name="services" value="Other" id="svc-other" class="service-opt">
-          <label for="svc-other">Other</label>
-        </div>
-      </div>
-
-      <div class="input-row">
-        <div class="form-group">
-          <label class="form-label" for="name">Your name</label>
-          <input type="text" id="name" name="name" placeholder="John Doe" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="john@company.com" required>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="company">Company / Business<span>optional</span></label>
-        <input type="text" id="company" name="company" placeholder="Your business name">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Budget range<span>optional</span></label>
-        <div class="budget-options">
-          <input type="radio" name="budget" value="Under $2k" id="b1" class="budget-opt">
-          <label for="b1">Under $2k</label>
-          <input type="radio" name="budget" value="$2k - $5k" id="b2" class="budget-opt">
-          <label for="b2">$2k – $5k</label>
-          <input type="radio" name="budget" value="$5k - $10k" id="b3" class="budget-opt">
-          <label for="b3">$5k – $10k</label>
-          <input type="radio" name="budget" value="$10k+" id="b4" class="budget-opt">
-          <label for="b4">$10k+</label>
-          <input type="radio" name="budget" value="Not sure" id="b5" class="budget-opt">
-          <label for="b5">Not sure yet</label>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="message">Tell us about your project</label>
-        <textarea id="message" name="message" placeholder="What are you building? What problem are you solving? Any timeline in mind?" required></textarea>
-      </div>
-
-      <button type="submit" class="submit-btn">
-        Send Message
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-    </form>
-
-    <div class="contact-info">
-      <a href="mailto:proviewmediaco@gmail.com">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
-        proviewmediaco@gmail.com
-      </a>
-      <a href="tel:+17025271837">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        (702) 527-1837
-      </a>
-      <a href="https://www.instagram.com/proviewmediaco/" target="_blank">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-        @proviewmediaco
-      </a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand">Proview Studio</a>
+    <nav class="nav-links">
+      <a href="industries/index.html">Industries</a>
+      <a href="work/index.html">Work</a>
+      <a href="services/index.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:+17025271837" class="nav-tel">(702) 527-1837</a>
+      <a href="contact.html" class="cta-btn">Start a project</a>
     </div>
   </div>
-</div>
+</header>
+
+<main>
+
+<section class="sec" style="padding-top:clamp(56px,7vw,104px);padding-bottom:clamp(40px,5vw,64px)">
+  <div class="wrap">
+    <div class="measure fade">
+      <span class="eyebrow" style="display:block;margin-bottom:20px">Start a project</span>
+      <h1 style="font-size:clamp(2.4rem,5.2vw,3.8rem)">Tell us about the business.</h1>
+      <p class="lede muted" style="margin-top:24px">Four short sections. Answer what you can, leave the rest blank. We reply the same business day, and if a project is not a fit we will say so rather than take it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <form class="intake" action="https://formsubmit.co/proviewmediaco@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New project inquiry from proviewmediaco.com">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="step">
+        <div class="step-h">
+          <span class="step-n">01</span>
+          <div>
+            <h2>Your business</h2>
+            <p>Who you are and what you do.</p>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="business">Business name</label>
+            <input type="text" id="business" name="Business" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="site">Current website <i>If you have one</i></label>
+            <input type="text" id="site" name="Current website" placeholder="example.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="industry">What kind of business is it?</label>
+          <input type="text" id="industry" name="Industry" placeholder="Manufacturer, law firm, clinic, brokerage, other">
+        </div>
+        <div class="field">
+          <label for="loc">Where is it? <i>City, or the property address for a shoot</i></label>
+          <input type="text" id="loc" name="Location" placeholder="City, state">
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-h">
+          <span class="step-n">02</span>
+          <div>
+            <h2>What you need</h2>
+            <p>Select everything that applies.</p>
+          </div>
+        </div>
+        <div class="opts">
+          <input type="checkbox" name="Need" value="Facility or property photography" id="n1"><label for="n1">Facility or property photography</label>
+          <input type="checkbox" name="Need" value="Aerial" id="n2"><label for="n2">Aerial</label>
+          <input type="checkbox" name="Need" value="Portraits" id="n3"><label for="n3">Portraits</label>
+          <input type="checkbox" name="Need" value="Video" id="n4"><label for="n4">Video</label>
+          <input type="checkbox" name="Need" value="Website" id="n5"><label for="n5">Website</label>
+          <input type="checkbox" name="Need" value="Custom software" id="n6"><label for="n6">Custom software or portal</label>
+          <input type="checkbox" name="Need" value="Brand and identity" id="n7"><label for="n7">Brand and identity</label>
+          <input type="checkbox" name="Need" value="Print and collateral" id="n8"><label for="n8">Print and collateral</label>
+          <input type="checkbox" name="Need" value="Not sure yet" id="n9"><label for="n9">Not sure yet</label>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-h">
+          <span class="step-n">03</span>
+          <div>
+            <h2>The project</h2>
+            <p>What you are trying to end up with, and by when.</p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="details">What does finished look like?</label>
+          <textarea id="details" name="Details" placeholder="A new website using photographs of our plant. A listing package for a property going to market. An intake system so staff stop retyping forms."></textarea>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="deadline">Deadline <i>If there is one</i></label>
+            <input type="text" id="deadline" name="Deadline" placeholder="Date, or the event driving it">
+          </div>
+          <div class="field">
+            <label for="budget">Budget range <i>Optional, and it helps</i></label>
+            <input type="text" id="budget" name="Budget" placeholder="A range is fine">
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-h">
+          <span class="step-n">04</span>
+          <div>
+            <h2>How to reach you</h2>
+            <p>We reply the same business day.</p>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="role">Role <i>Optional</i></label>
+            <input type="text" id="role" name="Role" autocomplete="organization-title">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone <i>Optional</i></label>
+            <input type="tel" id="phone" name="Phone" autocomplete="tel">
+          </div>
+        </div>
+      </div>
+
+      <div class="intake-submit">
+        <button type="submit" class="btn-submit">Send inquiry</button>
+        <span class="intake-note">Goes straight to the studio. No newsletter, no list.</span>
+      </div>
+    </form>
+
+    <div class="intake">
+      <div class="or">Or just call</div>
+      <div class="call-row">
+        <a href="tel:+17025271837">(702) 527-1837</a>
+        <span class="muted">Most projects are scoped in one conversation.</span>
+      </div>
+      <p class="muted" style="margin-top:26px;max-width:60ch">
+        <a href="mailto:proviewmediaco@gmail.com" class="link">proviewmediaco@gmail.com</a><br>
+        We do not offer thermal or infrared inspection, or interior confined space work. If that is the scope we will say so on the first call.
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <h4>Proview Studio</h4>
+        <address>
+          Las Vegas, Nevada<br>
+          <span class="pending">Street address pending</span>
+        </address>
+        <address style="margin-top:16px">
+          Brazos Valley, Texas<br>
+          <span class="pending">Opening, address pending</span>
+        </address>
+        <address style="margin-top:16px">
+          <a href="tel:+17025271837">(702) 527-1837</a><br>
+          <a href="mailto:proviewmediaco@gmail.com">proviewmediaco@gmail.com</a>
+        </address>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <nav>
+          <a href="industries/retail.html">Retail &amp; Local Business</a>
+          <a href="industries/manufacturing.html">Manufacturing &amp; Industrial</a>
+          <a href="industries/legal.html">Legal &amp; Professional</a>
+          <a href="industries/property.html">Commercial Property</a>
+          <a href="industries/healthcare.html">Healthcare &amp; Clinics</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <nav>
+          <a href="work/index.html">Work</a>
+          <a href="services/index.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+    <p class="foot-legal">
+      Proview Studio. Serving Las Vegas, Nevada and the Brazos Valley, Texas.
+      FAA Part 107 certified remote pilot.
+      Sample projects shown are illustrative and are not delivered client work.
+      Photography on this site is placeholder and will be replaced with original work.
+    </p>
+  </div>
+</footer>
 
 <script>
-const nav=document.getElementById('nav');
-const burger=document.getElementById('burger');
-const mobileMenu=document.getElementById('mobile-menu');
-if(burger){burger.addEventListener('click',()=>{burger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':''})}
-function closeMobile(){burger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow=''}
-</script>
-<script>
-// Set the _next redirect to current origin
-var nextInput = document.querySelector('input[name="_next"]');
-if (nextInput) nextInput.value = window.location.origin + '/contact.html?sent=1';
-
-// Show success if redirected back
-if (window.location.search.includes('sent=1')) {
-  document.getElementById('form-view').innerHTML = '<div class="success-msg" style="display:block"><h2>Message sent!</h2><p>Thanks for reaching out. We\'ll get back to you within 24 hours.</p><a href="./">&larr; Back to Home</a></div>';
-}
+(function(){
+  var els = document.querySelectorAll('.fade');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  },{rootMargin:'200px 0px 200px 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
 </script>
 </body>
 </html>

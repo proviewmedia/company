@@ -1,0 +1,470 @@
+/* ============================================================
+   PROVIEW MEDIA CO. / HOME
+   Editorial, not agency. Exhibition catalog, not SaaS page.
+   Near-monochrome. Photographs supply the color.
+   Type: grotesque display over serif body. Two families.
+   ============================================================ */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ground:#F8F7F5;      /* off-white, barely warm */
+  --ink:#1A1815;         /* warm off-black */
+  --gray-1:#6B665F;
+  --gray-2:#A29C93;
+  --rule:#E0DCD5;
+  --accent:#1E3A5F;      /* one accent. links and CTA only */
+
+  --display:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Helvetica Neue",sans-serif;
+  --body:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+
+  --gut:clamp(20px,5vw,80px);
+  --max:1400px;
+  --text:760px;
+  color-scheme:light;
+}
+
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--ground);color:var(--ink);
+  font-family:var(--body);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+@media(min-width:900px){body{font-size:18px}}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+.measure{max-width:var(--text)}
+
+/* ---------- Type ---------- */
+h1,h2,h3,.dsp{
+  font-family:var(--display);font-weight:600;
+  letter-spacing:-.035em;line-height:1.04;text-wrap:balance;
+}
+h1{font-size:clamp(2.6rem,6.4vw,4.5rem)}
+h2{font-size:clamp(2rem,4.4vw,3.4rem)}
+h3{font-size:clamp(1.3rem,2vw,1.75rem);letter-spacing:-.028em}
+.eyebrow{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gray-2);
+}
+.lede{font-size:clamp(1.15rem,1.7vw,1.4rem);line-height:1.55;color:var(--ink)}
+.muted{color:var(--gray-1)}
+.link{color:var(--accent);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.link:hover{text-decoration-thickness:2px}
+
+/* ---------- Nav, persistent CTA ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;background:var(--ground);
+  border-bottom:1px solid var(--rule);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:16px}
+.brand{font-family:var(--display);font-weight:600;letter-spacing:-.03em;font-size:1.05rem}
+.nav-links{display:flex;gap:30px;font-family:var(--display);font-size:.85rem;letter-spacing:-.01em}
+.nav-links a{color:var(--gray-1)}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-tel{font-family:var(--mono);font-size:.76rem;letter-spacing:.04em;color:var(--gray-1)}
+.cta-btn{
+  font-family:var(--display);font-size:.85rem;font-weight:500;letter-spacing:-.01em;
+  background:var(--ink);color:var(--ground);padding:11px 22px;border-radius:2px;
+  transition:background .2s;white-space:nowrap;
+}
+.cta-btn:hover{background:var(--accent)}
+@media(max-width:940px){.nav-links,.nav-tel{display:none}}
+
+/* ---------- Full-bleed media ---------- */
+.bleed{width:100%}
+.ph{
+  position:relative;overflow:hidden;background:#EDEAE4;
+  background-image:
+    repeating-linear-gradient(45deg,rgba(26,24,21,.022) 0 2px,transparent 2px 9px);
+}
+.ph-tag{
+  position:absolute;left:var(--gut);bottom:18px;
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gray-2);
+}
+.ph-in{position:absolute;left:16px;bottom:14px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:clamp(440px,82svh,860px)}
+.hero .ph{height:clamp(440px,82svh,860px)}
+.hero-copy{
+  position:absolute;inset:auto 0 0 0;padding-bottom:clamp(40px,7vh,80px);
+}
+.hero h1{max-width:19ch}
+.hero-actions{margin-top:30px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+
+/* ---------- Sections ---------- */
+.sec{padding-block:clamp(72px,11vw,170px)}
+.sec-rule{border-top:1px solid var(--rule)}
+.sec-head{margin-bottom:clamp(40px,5vw,72px)}
+.sec-head .eyebrow{display:block;margin-bottom:20px}
+
+/* ---------- Industries, the real navigation ---------- */
+.inds{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(24px,3.4vw,56px)}
+@media(max-width:760px){.inds{grid-template-columns:1fr}}
+.ind{display:block}
+/* fifth card takes the full row instead of orphaning */
+.inds .ind-wide{
+  grid-column:1/-1;display:grid;
+  grid-template-columns:1fr 1fr;gap:clamp(24px,3.4vw,56px);align-items:center;
+}
+.inds .ind-wide img,.inds .ind-wide .ph{margin-bottom:0}
+.ind .ph{aspect-ratio:4/3;margin-bottom:22px}
+.ind h3{margin-bottom:10px}
+.ind:hover h3{color:var(--accent)}
+.ind p{color:var(--gray-1);max-width:46ch}
+.ind-more{
+  display:inline-block;margin-top:14px;font-family:var(--display);
+  font-size:.85rem;color:var(--accent);
+}
+.ind:hover .ind-more{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- Selected work ---------- */
+.work-item{display:block;margin-bottom:clamp(56px,7vw,110px)}
+.work-item:last-child{margin-bottom:0}
+.work-item .ph{aspect-ratio:16/9}
+.work-meta{
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:24px;flex-wrap:wrap;padding-top:22px;
+}
+.work-meta h3{max-width:22ch}
+.work-meta .muted{font-family:var(--display);font-size:.9rem;text-align:right}
+.sample-tag{
+  display:inline-block;margin-bottom:14px;font-family:var(--mono);
+  font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gray-1);border:1px solid var(--rule);padding:5px 10px;
+}
+
+/* ---------- What's different ---------- */
+.diff{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(32px,4vw,72px)}
+@media(max-width:760px){.diff{grid-template-columns:1fr}}
+.diff-i{border-top:1px solid var(--rule);padding-top:24px}
+.diff-i h3{font-size:clamp(1.15rem,1.5vw,1.35rem);margin-bottom:12px}
+.diff-i p{color:var(--gray-1)}
+
+/* ---------- Proof strip, empty at launch ---------- */
+.proof{border-block:1px solid var(--rule);padding-block:40px}
+.proof-in{
+  display:flex;align-items:center;justify-content:center;
+  min-height:56px;font-family:var(--mono);font-size:.62rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gray-2);
+}
+
+/* ---------- Closing ---------- */
+.close{padding-block:clamp(80px,12vw,180px)}
+.close h2{max-width:16ch;margin-bottom:28px}
+.close-actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+
+/* ---------- Footer ---------- */
+.foot{border-top:1px solid var(--rule);padding-block:56px;font-size:.92rem}
+.foot-in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+@media(max-width:760px){.foot-in{grid-template-columns:1fr;gap:32px}}
+.foot h4{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gray-2);font-weight:400;margin-bottom:14px;
+}
+.foot address{font-style:normal;line-height:1.8;color:var(--gray-1)}
+.foot nav{display:flex;flex-direction:column;gap:9px;color:var(--gray-1)}
+.foot nav a:hover{color:var(--ink)}
+.foot-legal{
+  margin-top:44px;padding-top:24px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.04em;
+  color:var(--gray-2);line-height:1.8;
+}
+.pending{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gray-2);
+  border:1px dashed var(--rule);padding:4px 9px;display:inline-block;
+}
+
+/* ---------- Motion: fade-in on scroll only ---------- */
+@media(prefers-reduced-motion:no-preference){
+  .fade{opacity:0;transform:translateY(10px);transition:opacity .45s ease-out,transform .45s ease-out}
+  .fade.in{opacity:1;transform:none}
+}
+
+/* ============================================================
+   INTERIOR PAGES
+   ============================================================ */
+
+/* Page hero, interior. Photograph plus headline, no full-viewport. */
+.phero{position:relative;border-bottom:1px solid var(--rule)}
+.phero .ph{height:clamp(340px,54svh,560px)}
+.phero-copy{position:absolute;inset:auto 0 0 0;padding-bottom:clamp(32px,5vh,60px)}
+.phero h1{max-width:20ch;font-size:clamp(2.2rem,5.2vw,3.9rem)}
+.phero .eyebrow{display:block;margin-bottom:18px}
+
+/* Situation, two paragraphs */
+.situation p + p{margin-top:24px}
+
+/* Pain points, three concrete */
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,52px)}
+@media(max-width:820px){.pains{grid-template-columns:1fr;gap:28px}}
+.pain{border-top:1px solid var(--rule);padding-top:22px}
+.pain h3{font-size:clamp(1.1rem,1.4vw,1.25rem);margin-bottom:11px}
+.pain p{color:var(--gray-1);font-size:1rem}
+
+/* Bundle, what we do for this industry */
+.bundle{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,3.4vw,60px)}
+@media(max-width:820px){.bundle{grid-template-columns:1fr}}
+.bundle-i{border-top:1px solid var(--rule);padding-top:22px}
+.bundle-i h3{font-size:clamp(1.1rem,1.4vw,1.3rem);margin-bottom:11px}
+.bundle-i p{color:var(--gray-1);font-size:1rem}
+
+/* Unfair advantage, set apart */
+.unfair{border-left:2px solid var(--ink);padding-left:clamp(20px,3vw,40px)}
+.unfair p{font-size:clamp(1.2rem,1.9vw,1.55rem);line-height:1.45;max-width:30ch}
+
+/* FAQ */
+.faq{max-width:var(--text)}
+.qa{border-top:1px solid var(--rule)}
+.qa:last-child{border-bottom:1px solid var(--rule)}
+.qa summary{
+  cursor:pointer;list-style:none;padding:22px 0;display:flex;
+  justify-content:space-between;align-items:baseline;gap:24px;
+  font-family:var(--display);font-size:1.05rem;font-weight:600;letter-spacing:-.025em;
+}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font-family:var(--mono);font-size:1.1rem;color:var(--gray-2);flex:none}
+.qa[open] summary::after{content:"\2013"}
+.qa summary:hover{color:var(--accent)}
+.qa-a{padding:0 0 24px;color:var(--gray-1);max-width:66ch}
+
+/* Case study */
+.cs-lead{font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.35;font-family:var(--display);
+  font-weight:600;letter-spacing:-.03em;max-width:24ch}
+.disciplines{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,52px)}
+@media(max-width:820px){.disciplines{grid-template-columns:1fr;gap:28px}}
+.disc{border-top:1px solid var(--rule);padding-top:22px}
+.disc h3{font-size:1.1rem;margin-bottom:11px}
+.disc p{color:var(--gray-1);font-size:1rem}
+.seq{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,1.6vw,24px)}
+@media(max-width:680px){.seq{grid-template-columns:1fr}}
+.seq .ph{aspect-ratio:3/2}
+.seq .wide{grid-column:1 / -1}
+.seq .wide .ph{aspect-ratio:2/1}
+
+/* Next case */
+.nextcase{border-top:1px solid var(--rule);padding-top:clamp(32px,4vw,56px)}
+.nextcase a{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
+.nextcase h3{max-width:22ch}
+.nextcase:hover h3{color:var(--accent)}
+
+/* Contact */
+.ct-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,80px);align-items:start}
+@media(max-width:880px){.ct-grid{grid-template-columns:1fr;gap:44px}}
+.field{display:flex;flex-direction:column;gap:9px;margin-bottom:22px}
+.field label{font-family:var(--display);font-size:.86rem;font-weight:600}
+.field label i{font-style:normal;color:var(--gray-2);font-weight:400}
+.field input,.field textarea{
+  width:100%;padding:14px 15px;border:1px solid var(--rule);border-radius:2px;
+  font-family:var(--body);font-size:1rem;color:var(--ink);background:#fff;
+  transition:border-color .18s;
+}
+.field input:focus,.field textarea:focus{border-color:var(--ink);outline:none}
+.field textarea{min-height:130px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--gray-2)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+@media(max-width:560px){.opts{grid-template-columns:1fr}}
+.opts input{position:absolute;opacity:0;width:0;height:0}
+.opts label{
+  display:flex;align-items:center;gap:11px;padding:13px 15px;
+  border:1px solid var(--rule);font-family:var(--display);font-size:.9rem;
+  cursor:pointer;transition:border-color .16s,background .16s;user-select:none;background:#fff;
+}
+.opts label::before{
+  content:"";width:16px;height:16px;flex:none;border:1px solid var(--gray-2);
+  background-repeat:no-repeat;background-position:center;background-size:10px;
+  transition:background-color .16s,border-color .16s;
+}
+.opts input:checked + label{border-color:var(--ink)}
+.opts input:checked + label::before{
+  background-color:var(--ink);border-color:var(--ink);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M2.4 6.3l2.4 2.4L9.7 3.8' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+.opts input:focus-visible + label{outline:2px solid var(--accent);outline-offset:2px}
+.btn-submit{
+  width:100%;border:none;cursor:pointer;font-family:var(--display);
+  font-size:.95rem;font-weight:500;background:var(--ink);color:var(--ground);
+  padding:16px;border-radius:2px;transition:background .2s;
+}
+.btn-submit:hover{background:var(--accent)}
+.ct-side{display:flex;flex-direction:column;gap:30px}
+.ct-b h4{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gray-2);font-weight:400;margin-bottom:12px;
+}
+.ct-b p,.ct-b address{color:var(--gray-1);font-style:normal;line-height:1.75}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4.5vw,72px);align-items:start}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr}}
+.about-grid .ph{aspect-ratio:4/5}
+
+/* Fine print for placeholder imagery, so it cannot ship unnoticed */
+.ph::after{
+  content:"PLACEHOLDER";position:absolute;top:12px;right:12px;
+  font-family:var(--mono);font-size:.52rem;letter-spacing:.18em;
+  color:var(--gray-2);border:1px solid var(--rule);padding:3px 7px;background:var(--ground);
+}
+
+/* ============================================================
+   INTAKE FORM
+   Grouped, numbered steps. Reads as a professional intake
+   document rather than a contact box.
+   ============================================================ */
+.intake{max-width:820px}
+.step{border-top:1px solid var(--rule);padding-top:30px;margin-bottom:44px}
+.step:last-of-type{margin-bottom:34px}
+.step-h{display:flex;align-items:baseline;gap:14px;margin-bottom:24px}
+.step-n{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;
+  color:var(--gray-2);flex:none;padding-top:2px;
+}
+.step-h h2{font-size:clamp(1.35rem,2.2vw,1.8rem)}
+.step-h p{color:var(--gray-1);font-size:.95rem;margin-top:6px}
+.intake .field label{font-size:.92rem}
+.intake-submit{
+  border-top:1px solid var(--rule);padding-top:30px;
+  display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+}
+.intake-submit .btn-submit{width:auto;padding:16px 44px}
+.intake-note{color:var(--gray-1);font-size:.92rem}
+.or{
+  display:flex;align-items:center;gap:18px;margin:44px 0;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gray-2);
+}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--rule)}
+.call-row{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.call-row a{font-family:var(--display);font-size:clamp(1.6rem,3.2vw,2.2rem);
+  font-weight:600;letter-spacing:-.035em}
+.call-row a:hover{color:var(--accent)}
+
+/* Interactive content must never depend on scroll animation to appear. */
+form .fade,form.fade,.intake .fade{opacity:1 !important;transform:none !important}
+
+/* ============================================================
+   SPEC ROWS
+   Label left, value right, hairline between. Used on service
+   pages for inclusions. Collapses to stacked pairs on small.
+   ============================================================ */
+.rows{display:flex;flex-direction:column;width:100%}
+.row{display:grid;grid-template-columns:minmax(140px,.4fr) 1fr;gap:24px;
+     padding:18px 0;border-top:1px solid var(--rule)}
+.row:last-child{border-bottom:1px solid var(--rule)}
+@media(max-width:600px){.row{grid-template-columns:1fr;gap:5px}}
+.row dt{font-family:var(--display);font-size:.98rem;font-weight:600;letter-spacing:-.015em}
+.row dd{font-size:.98rem;color:var(--gray-1);line-height:1.6}
+
+/* ============================================================
+   PRICE FLOOR
+   One line, mid-page, never in the hero. A floor anchors the
+   conversation; the scoping call carries the real number.
+   ============================================================ */
+.price{border-left:2px solid var(--ink);padding-left:clamp(18px,3vw,34px)}
+.price .eyebrow{display:block;margin-bottom:14px}
+.price-fig{
+  font-family:var(--display);font-weight:600;letter-spacing:-.04em;
+  font-size:clamp(2.1rem,4.4vw,3.1rem);line-height:1.05;
+}
+.price-fig small{font-size:.42em;font-weight:600;letter-spacing:-.02em;color:var(--gray-1);display:block;margin-top:10px}
+.price-note{color:var(--gray-1);margin-top:16px;max-width:46ch;font-size:1rem}
+
+/* ============================================================
+   HERO CROSSFADE
+   Ambient, not a slider. No controls, no dots, nothing to
+   operate, so it reads as the page breathing rather than
+   content you might miss. Headline never moves.
+   ============================================================ */
+.hero-stack{position:absolute;inset:0;overflow:hidden}
+.hero-stack .frame{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease-in-out}
+.hero-stack .frame.on{opacity:1}
+.hero-stack .frame img{width:100%;height:100%;object-fit:cover;display:block}
+/* scrim keeps the headline readable whatever the photograph does */
+.hero-scrim{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(26,24,21,.62) 0%,rgba(26,24,21,.18) 42%,rgba(26,24,21,0) 72%)}
+/* first frame is visible before JS runs, so a script failure is invisible */
+.hero-stack .frame:first-child{opacity:1}
+@media(prefers-reduced-motion:reduce){
+  .hero-stack .frame{transition:none}
+  .hero-stack .frame:not(:first-child){display:none}
+}
+
+/* Hero type sits on photography, so it inverts. The scrim below
+   guarantees contrast whatever the image does. */
+.hero-scrim{background:linear-gradient(to top,
+  rgba(26,24,21,.74) 0%, rgba(26,24,21,.42) 34%, rgba(26,24,21,.10) 62%, rgba(26,24,21,0) 84%)}
+.hero-copy{z-index:2}
+.hero h1{color:#fff}
+.hero-copy .link{color:#fff;text-decoration-color:rgba(255,255,255,.55)}
+.hero-copy .link:hover{text-decoration-color:#fff}
+.hero-copy .cta-btn{background:#fff;color:var(--ink)}
+.hero-copy .cta-btn:hover{background:var(--ground);color:var(--ink)}
+.hero .ph-tag{color:rgba(255,255,255,.42)}
+
+/* Industry cards carry real photography now; match the placeholder frame. */
+.ind img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:22px}
+@media(max-width:760px){
+  .inds .ind-wide{grid-template-columns:1fr}
+  .inds .ind-wide img,.inds .ind-wide .ph{margin-bottom:22px}
+}
+
+/* Per-image framing. Each photograph has its subject in a different
+   part of the frame, so a single centred crop loses three of four. */
+img[src$="card-legal.jpg"]{object-position:center 30%}        /* bench and people sit high, floor dominates the lower half */
+img[src$="card-healthcare.jpg"]{object-position:26% 82%}      /* treatment chair sits lower left */
+img[src$="card-manufacturing.jpg"]{object-position:center 45%}
+img[src$="card-property.jpg"]{object-position:center 58%}     /* the site itself, not the skyline */
+
+/* Hero frames: fill the stack regardless of the source ratio. */
+.hero-stack .frame img{width:100%;height:100%;object-fit:cover;display:block}
+img[src$="hero-1.jpg"]{object-position:center 42%}   /* keep the building crown in frame */
+img[src$="hero-2.jpg"]{object-position:center 46%}
+img[src$="hero-3.jpg"]{object-position:center 52%}
+
+/* Case study cards carry photography at 16:9, matching the placeholder frame. */
+.work-item img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+
+/* ============================================================
+   JUMP BAR
+   In-page navigation for long, grouped pages. Sticks below the
+   main nav. Mono microtype so it reads as a utility strip, not
+   a second navigation competing with the first.
+   ============================================================ */
+.jump{
+  position:sticky;top:62px;z-index:50;
+  background:color-mix(in srgb,var(--ground) 94%,transparent);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-block:1px solid var(--rule);
+}
+.jump-in{
+  display:flex;align-items:center;gap:clamp(14px,2.4vw,34px);
+  padding-block:14px;overflow-x:auto;scrollbar-width:none;
+}
+.jump-in::-webkit-scrollbar{display:none}
+.jump-label{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gray-2);flex:none;
+}
+.jump-in a{
+  font-family:var(--display);font-size:.88rem;color:var(--gray-1);
+  white-space:nowrap;padding-bottom:2px;border-bottom:1px solid transparent;
+  transition:color .18s,border-color .18s;
+}
+.jump-in a:hover{color:var(--ink)}
+.jump-in a.here{color:var(--ink);border-bottom-color:var(--ink)}
+/* anchored sections must clear both the fixed nav and the sticky jump bar */
+.jump ~ section[id]{scroll-margin-top:124px}
+@media(max-width:640px){
+  .jump-label{display:none}
+  .jump-in{gap:20px}
+}
