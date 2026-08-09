@@ -177,12 +177,6 @@ h3{font-size:clamp(1.3rem,2vw,1.75rem);letter-spacing:-.028em}
   font-family:var(--mono);font-size:.62rem;letter-spacing:.04em;
   color:var(--gray-2);line-height:1.8;
 }
-.pending{
-  font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--gray-2);
-  border:1px dashed var(--rule);padding:4px 9px;display:inline-block;
-}
-
 /* ---------- Motion: fade-in on scroll only ---------- */
 @media(prefers-reduced-motion:no-preference){
   .fade{opacity:0;transform:translateY(10px);transition:opacity .45s ease-out,transform .45s ease-out}
@@ -378,6 +372,10 @@ form .fade,form.fade,.intake .fade{opacity:1 !important;transform:none !importan
 }
 .price-fig small{font-size:.42em;font-weight:600;letter-spacing:-.02em;color:var(--gray-1);display:block;margin-top:10px}
 .price-note{color:var(--gray-1);margin-top:16px;max-width:46ch;font-size:1rem}
+.price-est{
+  color:var(--gray-2);margin-top:14px;max-width:46ch;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;line-height:1.6;
+}
 
 /* ============================================================
    HERO CROSSFADE
