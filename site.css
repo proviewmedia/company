@@ -411,6 +411,21 @@ form .fade,form.fade,.intake .fade{opacity:1 !important;transform:none !importan
 
 /* Industry cards carry real photography now; match the placeholder frame. */
 .ind img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:22px}
+
+/* An industry page opens on the same photograph as the card that led here,
+   so clicking through feels like the image stayed put and the page moved. */
+.phero-photo img{
+  width:100%;height:clamp(340px,54svh,560px);object-fit:cover;display:block;
+}
+.phero-scrim{
+  position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,
+    rgba(26,24,21,.82) 0%, rgba(26,24,21,.60) 30%,
+    rgba(26,24,21,.28) 58%, rgba(26,24,21,0) 88%);
+}
+.phero-photo .phero-copy{z-index:2}
+.phero-photo h1{color:#fff}
+.phero-photo .eyebrow{color:rgba(255,255,255,.74)}
 @media(max-width:760px){
   .inds .ind-wide{grid-template-columns:1fr}
   .inds .ind-wide img,.inds .ind-wide .ph{margin-bottom:22px}
