@@ -96,7 +96,7 @@ h3{font-size:clamp(1.3rem,2vw,1.75rem);letter-spacing:-.028em}
 .hero-copy{
   position:absolute;inset:auto 0 0 0;padding-bottom:clamp(40px,7vh,80px);
 }
-.hero h1{max-width:19ch}
+.hero h1{max-width:23ch}
 .hero-actions{margin-top:30px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
 
 /* ---------- Sections ---------- */
