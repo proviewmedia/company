@@ -490,10 +490,8 @@ img[src$="card-property.jpg"]{object-position:center 58%}     /* the site itself
 /* Hero frames: fill the stack regardless of the source ratio. */
 .hero-stack .frame img{width:100%;height:100%;object-fit:cover;display:block}
 img[src$="hero-1.jpg"]{object-position:center 42%}   /* keep the building crown in frame */
-img[src$="hero-2.jpg"]{object-position:center 46%}
-img[src$="hero-3.jpg"]{object-position:center 52%}
-img[src$="hero-4.jpg"]{object-position:center 48%}   /* mesas up top, clubhouse out of the headline */
-img[src$="hero-5.jpg"]{object-position:center 46%}   /* 4:3 source, so hold the rows and the ramada */
+img[src$="hero-2.jpg"]{object-position:center 48%}   /* mesas up top, clubhouse out of the headline */
+img[src$="hero-3.jpg"]{object-position:center 46%}   /* 4:3 source, so hold the rows and the ramada */
 
 /* Case study cards carry photography at 16:9, matching the placeholder frame. */
 .work-item img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
