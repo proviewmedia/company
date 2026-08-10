@@ -86,10 +86,13 @@ h3{font-size:clamp(1.3rem,2vw,1.75rem);letter-spacing:-.028em}
 @media(max-width:940px){
   .nav-in{position:relative}
   .nav-toggle{
-    display:inline-block;background:none;border:0;cursor:pointer;
-    font-family:var(--display);font-size:.92rem;font-weight:500;
-    letter-spacing:-.01em;color:var(--ink);padding:10px 0;
+    display:flex;align-items:center;justify-content:center;
+    background:none;border:0;cursor:pointer;color:var(--ink);
+    width:44px;height:44px;margin-right:-10px;   /* 44px hit target, optically flush */
   }
+  .nav-toggle .i-close{display:none}
+  .nav-toggle[aria-expanded="true"] .i-bars{display:none}
+  .nav-toggle[aria-expanded="true"] .i-close{display:block}
   .nav-menu{
     display:none;position:absolute;top:100%;left:0;right:0;z-index:70;
     background:var(--ground);border-top:1px solid var(--rule);

@@ -8,12 +8,12 @@
   function close(){
     menu.classList.remove('open');
     toggle.setAttribute('aria-expanded','false');
-    toggle.textContent = 'Menu';
+    toggle.setAttribute('aria-label','Open menu');
   }
   function open(){
     menu.classList.add('open');
     toggle.setAttribute('aria-expanded','true');
-    toggle.textContent = 'Close';
+    toggle.setAttribute('aria-label','Close menu');
   }
 
   toggle.addEventListener('click', function(e){
