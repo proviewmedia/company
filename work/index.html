@@ -19,23 +19,26 @@
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPXLJ01JBK"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EPXLJ01JBK');</script>
-<link rel="stylesheet" href="../site.css?v=26">
+<link rel="stylesheet" href="../site.css?v=28">
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap nav-in">
     <a href="../index.html" class="brand">Proview Studio</a>
-    <nav class="nav-links">
-      <a href="../industries/index.html">Industries</a>
-      <a href="index.html" aria-current="page">Work</a>
-      <a href="../services/index.html">Services</a>
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-    <div class="nav-right">
-      <a href="tel:+17025271837" class="nav-tel">(702) 527-1837</a>
-      <a href="../contact.html" class="cta-btn">Start a project</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">Menu</button>
+    <div class="nav-menu" id="navMenu">
+      <nav class="nav-links">
+        <a href="../industries/index.html">Industries</a>
+        <a href="index.html" aria-current="page">Work</a>
+        <a href="../services/index.html">Services</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <a href="tel:+17025271837" class="nav-tel">(702) 527-1837</a>
+        <a href="../contact.html" class="cta-btn">Start a project</a>
+      </div>
     </div>
   </div>
 </header>
@@ -47,7 +50,7 @@
     <div class="measure fade">
       <span class="eyebrow" style="display:block;margin-bottom:20px">Work</span>
       <h1 style="font-size:clamp(2.4rem,5.2vw,3.8rem)">What an engagement produces.</h1>
-      <p class="lede muted" style="margin-top:26px">Grouped by what the work actually is. Aerial and video first, then websites and commerce, then software and product.</p>
+      <p class="lede muted" style="margin-top:26px">Grouped by what the work actually is. Aerial and video first, then websites and commerce, then software and product, then brand and naming.</p>
     </div>
   </div>
 </section>
@@ -194,6 +197,30 @@
   </div>
 </section>
 
+<section class="sec sec-rule">
+  <div class="wrap">
+    <div class="sec-head measure fade">
+      <span class="eyebrow">Brand and naming</span>
+      <h2>Named, marked, and carried onto the site.</h2>
+      <p class="lede muted" style="margin-top:22px">Identity work that does not stop at a handoff file. We stay on through implementation so the mark on the live site is the mark that was drawn.</p>
+    </div>
+
+    <div class="work-grid">
+
+      <a class="work-item fade" href="intruity.html">
+        <img src="../img/work/intruity.jpg" alt="The Intruity Corporation website, with the OneLink introduction video in the hero" width="2000" height="1125" loading="lazy">
+        <div class="work-meta">
+          <div>
+            <h3>A platform that shipped without a name.</h3>
+          </div>
+          <span class="muted">Naming<br>Logo design<br>Website support</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <section class="close">
   <div class="wrap fade">
     <h2>Tell us what the business needs to look like.</h2>
@@ -257,5 +284,6 @@
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="../nav.js?v=1"></script>
 </body>
 </html>

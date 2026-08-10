@@ -74,7 +74,40 @@ h3{font-size:clamp(1.3rem,2vw,1.75rem);letter-spacing:-.028em}
   transition:background .2s;white-space:nowrap;
 }
 .cta-btn:hover{background:var(--accent)}
-@media(max-width:940px){.nav-links,.nav-tel{display:none}}
+/* Desktop keeps the original three-item row: display:contents makes
+   .nav-menu's children lay out directly in .nav-in, so nothing shifts. */
+.nav-menu{display:contents}
+.nav-toggle{display:none}
+
+/* Below 940px the links used to just vanish with nothing to replace
+   them, which left the site with no navigation on a phone. Now they
+   fold into a panel, and the persistent CTA folds in with them rather
+   than fighting the wordmark for room in the bar. */
+@media(max-width:940px){
+  .nav-in{position:relative}
+  .nav-toggle{
+    display:inline-block;background:none;border:0;cursor:pointer;
+    font-family:var(--display);font-size:.92rem;font-weight:500;
+    letter-spacing:-.01em;color:var(--ink);padding:10px 0;
+  }
+  .nav-menu{
+    display:none;position:absolute;top:100%;left:0;right:0;z-index:70;
+    background:var(--ground);border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);padding:4px var(--gut) 26px;
+    max-height:calc(100svh - 100%);overflow-y:auto;
+  }
+  .nav-menu.open{display:block}
+  .nav-menu .nav-links{display:flex;flex-direction:column;gap:0;font-size:1rem}
+  .nav-menu .nav-links a{
+    display:block;padding:16px 0;border-bottom:1px solid var(--rule);color:var(--ink);
+  }
+  .nav-menu .nav-links a[aria-current="page"]{color:var(--gray-1)}
+  .nav-menu .nav-right{
+    display:flex;flex-direction:column;align-items:stretch;gap:16px;margin-top:22px;
+  }
+  .nav-menu .nav-tel{display:block;font-size:.86rem}
+  .nav-menu .cta-btn{text-align:center;padding:15px 22px}
+}
 
 /* ---------- Full-bleed media ---------- */
 .bleed{width:100%}

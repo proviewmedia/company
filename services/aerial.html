@@ -19,23 +19,26 @@
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPXLJ01JBK"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EPXLJ01JBK');</script>
-<link rel="stylesheet" href="../site.css?v=26">
+<link rel="stylesheet" href="../site.css?v=28">
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap nav-in">
     <a href="../index.html" class="brand">Proview Studio</a>
-    <nav class="nav-links">
-      <a href="../industries/index.html">Industries</a>
-      <a href="../work/index.html">Work</a>
-      <a href="index.html" aria-current="page">Services</a>
-      <a href="../about.html" aria-current="page">About</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-    <div class="nav-right">
-      <a href="tel:+17025271837" class="nav-tel">(702) 527-1837</a>
-      <a href="../contact.html" class="cta-btn">Start a project</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">Menu</button>
+    <div class="nav-menu" id="navMenu">
+      <nav class="nav-links">
+        <a href="../industries/index.html">Industries</a>
+        <a href="../work/index.html">Work</a>
+        <a href="index.html" aria-current="page">Services</a>
+        <a href="../about.html" aria-current="page">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <a href="tel:+17025271837" class="nav-tel">(702) 527-1837</a>
+        <a href="../contact.html" class="cta-btn">Start a project</a>
+      </div>
     </div>
   </div>
 </header>
@@ -223,5 +226,6 @@
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="../nav.js?v=1"></script>
 </body>
 </html>
