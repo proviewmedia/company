@@ -391,6 +391,13 @@ a.bundle-i:hover .bundle-more{text-decoration:underline;text-underline-offset:3p
 
 /* About */
 
+/* Portrait beside the copy. Sticky so the face stays with the reader
+   through a long column, and 4:5 because that is how the frame is cut. */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,4.5vw,72px);align-items:start}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr;gap:36px}}
+.about-grid img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;display:block}
+@media(min-width:881px){.about-grid .portrait{position:sticky;top:calc(var(--nav-h,76px) + 28px)}}
+
 /* ============================================================
    INTAKE FORM
    Grouped, numbered steps. Reads as a professional intake
