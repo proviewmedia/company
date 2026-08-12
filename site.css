@@ -114,17 +114,10 @@ h3{font-size:clamp(1.3rem,2vw,1.75rem);letter-spacing:-.028em}
 
 /* ---------- Full-bleed media ---------- */
 .bleed{width:100%}
-.ph{
-  position:relative;overflow:hidden;background:#EDEAE4;
-  background-image:
-    repeating-linear-gradient(45deg,rgba(26,24,21,.022) 0 2px,transparent 2px 9px);
-}
-.ph-tag{
-  position:absolute;left:var(--gut);bottom:18px;
-  font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--gray-2);
-}
-.ph-in{position:absolute;left:16px;bottom:14px}
+/* A flat band where a photograph has not been made yet. Deliberately a
+   colour, not a placeholder: no hatching, no dimension label. Deep
+   enough to read as a decision against the page ground. */
+.ph{position:relative;overflow:hidden;background:#DFD9CE}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:clamp(440px,82svh,860px)}
@@ -398,13 +391,6 @@ a.bundle-i:hover .bundle-more{text-decoration:underline;text-underline-offset:3p
 @media(max-width:880px){.about-grid{grid-template-columns:1fr}}
 .about-grid .ph{aspect-ratio:4/5}
 
-/* Fine print for placeholder imagery, so it cannot ship unnoticed */
-.ph::after{
-  content:"PLACEHOLDER";position:absolute;top:12px;right:12px;
-  font-family:var(--mono);font-size:.52rem;letter-spacing:.18em;
-  color:var(--gray-2);border:1px solid var(--rule);padding:3px 7px;background:var(--ground);
-}
-
 /* ============================================================
    INTAKE FORM
    Grouped, numbered steps. Reads as a professional intake
@@ -502,7 +488,6 @@ form .fade,form.fade,.intake .fade{opacity:1 !important;transform:none !importan
 .hero-copy .link:hover{text-decoration-color:#fff}
 .hero-copy .cta-btn{background:#fff;color:var(--ink)}
 .hero-copy .cta-btn:hover{background:var(--ground);color:var(--ink)}
-.hero .ph-tag{color:rgba(255,255,255,.42)}
 
 /* Industry cards carry real photography now; match the placeholder frame. */
 .ind img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:22px}
