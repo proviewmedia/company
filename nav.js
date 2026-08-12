@@ -33,3 +33,23 @@
     if(window.innerWidth > 940) close();
   });
 })();
+
+/* The jump bar sticks below the header, and anchored sections have to clear
+   both. Measuring beats hardcoding, which is what put the bar 14px under the
+   header in the first place. */
+(function(){
+  var root = document.documentElement;
+  function measure(){
+    var nav  = document.querySelector('.nav');
+    var jump = document.querySelector('.jump');
+    if(nav)  root.style.setProperty('--nav-h',  Math.round(nav.getBoundingClientRect().height)  + 'px');
+    if(jump) root.style.setProperty('--jump-h', Math.round(jump.getBoundingClientRect().height) + 'px');
+  }
+  measure();
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure);          // webfonts can change the height
+  if('ResizeObserver' in window){
+    var nav = document.querySelector('.nav');
+    if(nav) new ResizeObserver(measure).observe(nav);
+  }
+})();
