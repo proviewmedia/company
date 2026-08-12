@@ -259,6 +259,16 @@ h3{font-size:clamp(1.3rem,2vw,1.75rem);letter-spacing:-.028em}
 .bundle-i{border-top:1px solid var(--rule);padding-top:22px}
 .bundle-i h3{font-size:clamp(1.1rem,1.4vw,1.3rem);margin-bottom:11px}
 .bundle-i p{color:var(--gray-1);font-size:1rem}
+/* Service cards are links but gave no signal. Same affordance the
+   industry cards use, so it reads as one system. */
+.bundle-more{
+  display:inline-block;margin-top:14px;font-family:var(--display);
+  font-size:.85rem;color:var(--accent);
+}
+a.bundle-i:hover h3{color:var(--accent)}
+a.bundle-i:hover .bundle-more{text-decoration:underline;text-underline-offset:3px}
+/* A third package would orphan on a 2-up row, so it takes the row. */
+.bundle .bundle-wide{grid-column:1/-1}
 
 /* Unfair advantage, set apart */
 .unfair{border-left:2px solid var(--ink);padding-left:clamp(20px,3vw,40px)}
