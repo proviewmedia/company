@@ -147,12 +147,6 @@ h3{font-size:clamp(1.3rem,2vw,1.75rem);letter-spacing:-.028em}
 .inds{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(24px,3.4vw,56px)}
 @media(max-width:760px){.inds{grid-template-columns:1fr}}
 .ind{display:block}
-/* fifth card takes the full row instead of orphaning */
-.inds .ind-wide{
-  grid-column:1/-1;display:grid;
-  grid-template-columns:1fr 1fr;gap:clamp(24px,3.4vw,56px);align-items:center;
-}
-.inds .ind-wide img,.inds .ind-wide .ph{margin-bottom:0}
 .ind .ph{aspect-ratio:4/3;margin-bottom:22px}
 .ind h3{margin-bottom:10px}
 .ind:hover h3{color:var(--accent)}
@@ -396,9 +390,6 @@ a.bundle-i:hover .bundle-more{text-decoration:underline;text-underline-offset:3p
 .ct-b p,.ct-b address{color:var(--gray-1);font-style:normal;line-height:1.75}
 
 /* About */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4.5vw,72px);align-items:start}
-@media(max-width:880px){.about-grid{grid-template-columns:1fr}}
-.about-grid .ph{aspect-ratio:4/5}
 
 /* ============================================================
    INTAKE FORM
@@ -516,8 +507,6 @@ form .fade,form.fade,.intake .fade{opacity:1 !important;transform:none !importan
 .phero-photo h1{color:#fff}
 .phero-photo .eyebrow{color:rgba(255,255,255,.74)}
 @media(max-width:760px){
-  .inds .ind-wide{grid-template-columns:1fr}
-  .inds .ind-wide img,.inds .ind-wide .ph{margin-bottom:22px}
 }
 
 /* Per-image framing. Each photograph has its subject in a different
